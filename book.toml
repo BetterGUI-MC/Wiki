@@ -1,0 +1,10 @@
+[book]
+authors = ["HSGamer"]
+language = "en"
+multilingual = false
+src = "src"
+title = "BetterGUI"
+
+[output.html]
+git-repository-url = "https://github.com/BetterGUI-MC/Wiki"
+git-repository-icon = "fa-github"
