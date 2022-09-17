@@ -8,3 +8,4 @@ title = "BetterGUI"
 [output.html]
 git-repository-url = "https://github.com/BetterGUI-MC/Wiki"
 git-repository-icon = "fa-github"
+site-url = "/Wiki/"
