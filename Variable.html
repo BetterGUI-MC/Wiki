@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Page not found - BetterGUI</title>
-        <base href="/">
+        <title>Variable - BetterGUI</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -76,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Basic</li><li class="chapter-item expanded "><a href="Basic-tutorial.html"><strong aria-hidden="true">1.</strong> Tutorial</a></li><li class="chapter-item expanded "><a href="Command-&-Permission.html"><strong aria-hidden="true">2.</strong> Command & Permission</a></li><li class="chapter-item expanded "><a href="Addon-Downloader.html"><strong aria-hidden="true">3.</strong> Addon Downloader</a></li><li class="chapter-item expanded "><a href="Config-&-Message.html"><strong aria-hidden="true">4.</strong> Config & Message</a></li><li class="chapter-item expanded "><a href="FAQs.html"><strong aria-hidden="true">5.</strong> FAQs</a></li><li class="chapter-item expanded affix "><li class="part-title">Maker & Creator</li><li class="chapter-item expanded "><a href="Menu.html"><strong aria-hidden="true">6.</strong> Menu</a></li><li class="chapter-item expanded "><a href="Button.html"><strong aria-hidden="true">7.</strong> Button</a></li><li class="chapter-item expanded "><a href="Action.html"><strong aria-hidden="true">8.</strong> Action</a></li><li class="chapter-item expanded "><a href="Requirement-Set.html"><strong aria-hidden="true">9.</strong> Requirement Set</a></li><li class="chapter-item expanded "><a href="Requirement.html"><strong aria-hidden="true">10.</strong> Requirement</a></li><li class="chapter-item expanded "><a href="Item-Modifier.html"><strong aria-hidden="true">11.</strong> Item Modifier</a></li><li class="chapter-item expanded "><a href="Variable.html"><strong aria-hidden="true">12.</strong> Variable</a></li><li class="chapter-item expanded "><a href="Message-Color.html"><strong aria-hidden="true">13.</strong> Message Color</a></li><li class="chapter-item expanded "><a href="Expression-&-Condition.html"><strong aria-hidden="true">14.</strong> Expression & Condition</a></li><li class="chapter-item expanded "><a href="Click-types.html"><strong aria-hidden="true">15.</strong> Click Types</a></li><li class="chapter-item expanded affix "><li class="part-title">Developer</li><li class="chapter-item expanded "><a href="Add-as-a-dependency.html"><strong aria-hidden="true">16.</strong> Add as a dependency</a></li><li class="chapter-item expanded "><a href="https://bettergui-mc.github.io/BetterGUI.html"><strong aria-hidden="true">17.</strong> Javadocs</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Basic</li><li class="chapter-item expanded "><a href="Basic-tutorial.html"><strong aria-hidden="true">1.</strong> Tutorial</a></li><li class="chapter-item expanded "><a href="Command-&-Permission.html"><strong aria-hidden="true">2.</strong> Command & Permission</a></li><li class="chapter-item expanded "><a href="Addon-Downloader.html"><strong aria-hidden="true">3.</strong> Addon Downloader</a></li><li class="chapter-item expanded "><a href="Config-&-Message.html"><strong aria-hidden="true">4.</strong> Config & Message</a></li><li class="chapter-item expanded "><a href="FAQs.html"><strong aria-hidden="true">5.</strong> FAQs</a></li><li class="chapter-item expanded affix "><li class="part-title">Maker & Creator</li><li class="chapter-item expanded "><a href="Menu.html"><strong aria-hidden="true">6.</strong> Menu</a></li><li class="chapter-item expanded "><a href="Button.html"><strong aria-hidden="true">7.</strong> Button</a></li><li class="chapter-item expanded "><a href="Action.html"><strong aria-hidden="true">8.</strong> Action</a></li><li class="chapter-item expanded "><a href="Requirement-Set.html"><strong aria-hidden="true">9.</strong> Requirement Set</a></li><li class="chapter-item expanded "><a href="Requirement.html"><strong aria-hidden="true">10.</strong> Requirement</a></li><li class="chapter-item expanded "><a href="Item-Modifier.html"><strong aria-hidden="true">11.</strong> Item Modifier</a></li><li class="chapter-item expanded "><a href="Variable.html" class="active"><strong aria-hidden="true">12.</strong> Variable</a></li><li class="chapter-item expanded "><a href="Message-Color.html"><strong aria-hidden="true">13.</strong> Message Color</a></li><li class="chapter-item expanded "><a href="Expression-&-Condition.html"><strong aria-hidden="true">14.</strong> Expression & Condition</a></li><li class="chapter-item expanded "><a href="Click-types.html"><strong aria-hidden="true">15.</strong> Click Types</a></li><li class="chapter-item expanded affix "><li class="part-title">Developer</li><li class="chapter-item expanded "><a href="Add-as-a-dependency.html"><strong aria-hidden="true">16.</strong> Add as a dependency</a></li><li class="chapter-item expanded "><a href="https://bettergui-mc.github.io/BetterGUI.html"><strong aria-hidden="true">17.</strong> Javadocs</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -138,19 +137,82 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="info"><a class="header" href="#info">Info</a></h1>
+<ul>
+<li>Variable (or sometimes Placeholder) is a special string that will be replaced to a value that is relative to the player.</li>
+<li>Variables can be seen as the string inside curly brackets <code>{}</code>. We will see some of these variables in the next section.</li>
+<li>An admin can use the command <code>/getvaraibles</code> to get the list of registered variables</li>
+<li>You can use variables in your text by putting them in curly brackets. For example, <code>Hello {player}!</code> will say hello to the player, with <code>{player}</code> replaced to the player's name.</li>
+</ul>
+<h1 id="built-in-variables"><a class="header" href="#built-in-variables">Built-in variables</a></h1>
+<ul>
+<li><code>{player}</code> returns the player's name</li>
+<li><code>{uuid}</code> returns the unique id of the player</li>
+<li><code>{online}</code> returns the number of online players</li>
+<li><code>{max_players}</code> returns the max capacity of players in the server</li>
+<li><code>{world}</code> returns the current world of the player</li>
+<li><code>{world_env}</code> returns the environment of the current world of the player</li>
+<li><code>{x}</code> returns the current X position of the player</li>
+<li><code>{y}</code> returns the current Y position of the player</li>
+<li><code>{z}</code> returns the current Z position of the player</li>
+<li><code>{bed_world}</code> returns the current world of the player's bed</li>
+<li><code>{bed_world_env}</code> returns the environment of the current world of the player's bed</li>
+<li><code>{bed_x}</code> returns the current X position of the player's bed</li>
+<li><code>{bed_y}</code> returns the current Y position of the player's bed</li>
+<li><code>{bed_z}</code> returns the current Z position of the player's bed</li>
+<li><code>{exp}</code> returns the experiences (XP) of the player</li>
+<li><code>{level}</code> returns the level of the player</li>
+<li><code>{exp_to_level}</code> returns the required XP to go to the next level</li>
+<li><code>{food_level}</code> returns the food level of the player</li>
+<li><code>{ip}</code> returns the IP address of the player</li>
+<li><code>{biome}</code> returns the current biome in the player's current location</li>
+<li><code>{ping}</code> returns the latency of the player's connection</li>
+<li><code>{random_&lt;i&gt;}</code> or <code>{random_&lt;i1&gt;:&lt;i2}}</code> returns a random number from 0 to <code>&lt;i&gt;</code>, or from <code>&lt;i1&gt;</code> to <code>&lt;i2&gt;</code></li>
+<li><code>{condition_&lt;expression&gt;}</code> returns the final value (result) after evaluating the <code>&lt;expression&gt;</code></li>
+</ul>
+<h1 id="menu-variables"><a class="header" href="#menu-variables">Menu variables</a></h1>
+<ul>
+<li>Variables start with <code>menu_</code> are called Menu Variables.</li>
+<li>Those variables are generated by the menu.</li>
+<li>I can not tell what menu variables are used for. But they have different functions.</li>
+<li>For example, you can see some variables from the example menu:
+<ul>
+<li><code>{menu_example.yml_button_advanced_cooldown_click_default_reqset_test_cooldown}</code></li>
+<li><code>{menu_example.yml_button_cooldown_click_default_reqset_test-cooldown_cooldown}</code></li>
+<li><code>{menu_example.yml_button_requirement-set_click_default_reqset_nether_world_level}</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="hook-to-placeholderapi"><a class="header" href="#hook-to-placeholderapi">Hook to PlaceholderAPI</a></h1>
+<ul>
+<li>You can use placeholders from PlaceholderAPI in your text.</li>
+<li>You can also use variables from BetterGUI to other plugins via PlaceholderAPI</li>
+<li>The format for this is <code>%bettergui_&lt;variable&gt;%</code> (<code>&lt;variable&gt;</code> is a variable without the curly brackets <code>{}</code>)</li>
+<li>For example, this is the placeholder to use <code>{player}</code> in other plugins: <code>%bettergui_player%</code></li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="Item-Modifier.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="Message-Color.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="Item-Modifier.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="Message-Color.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>

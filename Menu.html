@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Menu - BetterGUI</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Basic</li><li class="chapter-item expanded "><a href="Basic-tutorial.html"><strong aria-hidden="true">1.</strong> Tutorial</a></li><li class="chapter-item expanded "><a href="Command-&-Permission.html"><strong aria-hidden="true">2.</strong> Command & Permission</a></li><li class="chapter-item expanded "><a href="Addon-Downloader.html"><strong aria-hidden="true">3.</strong> Addon Downloader</a></li><li class="chapter-item expanded "><a href="Config-&-Message.html"><strong aria-hidden="true">4.</strong> Config & Message</a></li><li class="chapter-item expanded "><a href="FAQs.html"><strong aria-hidden="true">5.</strong> FAQs</a></li><li class="chapter-item expanded affix "><li class="part-title">Maker & Creator</li><li class="chapter-item expanded "><a href="Menu.html" class="active"><strong aria-hidden="true">6.</strong> Menu</a></li><li class="chapter-item expanded "><a href="Button.html"><strong aria-hidden="true">7.</strong> Button</a></li><li class="chapter-item expanded "><a href="Action.html"><strong aria-hidden="true">8.</strong> Action</a></li><li class="chapter-item expanded "><a href="Requirement-Set.html"><strong aria-hidden="true">9.</strong> Requirement Set</a></li><li class="chapter-item expanded "><a href="Requirement.html"><strong aria-hidden="true">10.</strong> Requirement</a></li><li class="chapter-item expanded "><a href="Item-Modifier.html"><strong aria-hidden="true">11.</strong> Item Modifier</a></li><li class="chapter-item expanded "><a href="Variable.html"><strong aria-hidden="true">12.</strong> Variable</a></li><li class="chapter-item expanded "><a href="Message-Color.html"><strong aria-hidden="true">13.</strong> Message Color</a></li><li class="chapter-item expanded "><a href="Expression-&-Condition.html"><strong aria-hidden="true">14.</strong> Expression & Condition</a></li><li class="chapter-item expanded "><a href="Click-types.html"><strong aria-hidden="true">15.</strong> Click Types</a></li><li class="chapter-item expanded affix "><li class="part-title">Developer</li><li class="chapter-item expanded "><a href="Add-as-a-dependency.html"><strong aria-hidden="true">16.</strong> Add as a dependency</a></li><li class="chapter-item expanded "><a href="https://bettergui-mc.github.io/BetterGUI.html"><strong aria-hidden="true">17.</strong> Javadocs</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">BetterGUI</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/BetterGUI-MC/Wiki" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="info"><a class="header" href="#info">Info</a></h1>
+<ul>
+<li>Menus are what BetterGUI is for. It's the thing displayed to the player.</li>
+<li>There are many types of Menu. A developer can also make his own menu and register to the plugin.</li>
+<li>Generally, a menu contains 2 sections: <code>menu-settings</code> and <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Button"><code>Button</code></a></li>
+<li>You can set the type of menu by setting the <code>menu-type</code> value in the <code>menu-settings</code> section</li>
+</ul>
+<h1 id="type-of-menus"><a class="header" href="#type-of-menus">Type of Menus</a></h1>
+<h2 id="simple-menu"><a class="header" href="#simple-menu">Simple Menu</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">menu-settings:
+  menu-type: simple # You don't need to set this type. It's the default value
+
+  # The actions when the player opens the menu
+  open-action:
+  - action
+  - action
+  - action
+  ...
+
+  # The actions when the player closes the menu
+  close-action:
+  - action
+  - action
+  - action
+  ...
+
+  # The type of the display inventory
+  # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html
+  inventory-type: &lt;inventory-type&gt;
+  #inventory: &lt;inventory-type&gt;
+
+  # The rows &lt;1-6&gt; of the inventory if the type is CHEST
+  rows: &lt;1-6&gt;
+  
+  # How frequently the menu will refresh itself
+  auto-refresh: &lt;ticks&gt;
+  #ticks: &lt;ticks&gt;
+
+  # The requirement before the player can open the menu
+  view-requirement:
+    &lt;requirement-set&gt;
+    &lt;requirement-set&gt;
+    &lt;requirement-set&gt;
+    ...
+
+  # The requirement before the player can close the menu
+  close-requirement:
+    &lt;requirement-set&gt;
+    &lt;requirement-set&gt;
+    &lt;requirement-set&gt;
+    ...
+
+  # The permission required to open the menu
+  permission: bettergui.test
+  
+  # The command to open the menu
+  command:
+  - command1
+  - command2
+  ...
+  
+  # The title of the inventory
+  title: &lt;name&gt;
+  #name: &lt;name&gt;
+
+# This is a special button. It will fill all empty slots of the inventory (You don't need to set this button)
+default-button:
+  &lt;button-settings&gt;
+
+button1:
+  &lt;button-settings&gt;
+button2:
+  &lt;button-settings&gt;
+...
+</code></pre>
+<ul>
+<li>None of the <code>menu-settings</code> is required to get the menu working.</li>
+<li>The <code>open-action</code> and <code>close-action</code> use the <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Action">Action</a> value.</li>
+<li>The <code>view-requirement</code> and <code>close-requirement</code> use the <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Requirement-Set">Requirement Set</a> value.</li>
+<li>An example for this can be found <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/master/src/main/resources/menu/example.yml">Here</a></li>
+</ul>
+<h2 id="args-menu"><a class="header" href="#args-menu">Args Menu</a></h2>
+<ul>
+<li>Args Menu is the same as Simple Menu, with 4 more sections in the <code>menu-settings</code>
+<ul>
+<li><code>min-args</code> sets the minimum amount of arguments in the command to open the menu</li>
+<li><code>args</code> sets the arguments</li>
+<li><code>min-args-action</code> sets the <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Action">Action</a> when the number of arguments is lower than <code>min-args</code></li>
+<li><code>default-args</code> sets the default arguments</li>
+</ul>
+</li>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">menu-settings:
+  menu-type: args
+  min-args: &lt;number&gt;
+  args:
+  - arg1
+  - arg2
+  - arg3
+  ...
+  min-args-action:
+  - action
+  - action
+  - action
+  ...
+  default-args: &quot;string with space&quot;
+  &lt;other-settings&gt;
+
+button1:
+  &lt;button-settings&gt;
+button2:
+  &lt;button-settings&gt;
+...
+</code></pre>
+<ul>
+<li>When using this menu, the menu will register some <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Variable">Variables</a> to the plugin:
+<ul>
+<li><code>{menu_&lt;menu-name&gt;_merged_args}</code> returns the completed arguments that the player typed to open the menu <code>&lt;menu-name&gt;</code></li>
+<li><code>{menu_&lt;menu-name&gt;_arg_&lt;arg&gt;}</code> returns the value of the argument at the <code>&lt;arg&gt;</code> position from the menu <code>&lt;menu-name&gt;</code></li>
+</ul>
+</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-yaml"># Replace &lt;menu-name&gt; with your menu name
+menu-settings:
+  menu-type: args
+
+  # The minimum number of arguments is 2
+  min-args: 2
+
+  # Register 2 arguments and register 2 variables to the plugin: {menu_&lt;menu-name&gt;_arg_test} and {menu_&lt;menu-name&gt;_arg_otest}
+  args:
+  - test
+  - otest
+  
+  # Set the default arguments of &quot;test&quot; and &quot;otest&quot; to &quot;hello&quot; and &quot;world&quot;
+  default-args: &quot;hello world&quot;
+  
+  # The action when failed to meet the min-args
+  min-args-action: &quot;tell: &amp;cAt least 2 arguments&quot;
+  ...
+
+# The button
+button:
+  id: stone
+  name: &quot;&amp;bTest Arguments&quot;
+  lore:
+  - &quot;Arg 1: {menu_&lt;menu-name&gt;_arg_test}&quot;
+  - &quot;Arg 2: {menu_&lt;menu-name&gt;_arg_otest}&quot;
+  - &quot;Merged Args: {menu_&lt;menu-name&gt;_merged_args}&quot;
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="FAQs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="Button.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="FAQs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="Button.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

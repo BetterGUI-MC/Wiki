@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="Home.html"><strong aria-hidden="true">1.</strong> Home</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Basic</li><li class="chapter-item expanded "><a href="Basic-tutorial.html"><strong aria-hidden="true">1.</strong> Tutorial</a></li><li class="chapter-item expanded "><a href="Command-&-Permission.html"><strong aria-hidden="true">2.</strong> Command & Permission</a></li><li class="chapter-item expanded "><a href="Addon-Downloader.html"><strong aria-hidden="true">3.</strong> Addon Downloader</a></li><li class="chapter-item expanded "><a href="Config-&-Message.html"><strong aria-hidden="true">4.</strong> Config & Message</a></li><li class="chapter-item expanded "><a href="FAQs.html"><strong aria-hidden="true">5.</strong> FAQs</a></li><li class="chapter-item expanded affix "><li class="part-title">Maker & Creator</li><li class="chapter-item expanded "><a href="Menu.html"><strong aria-hidden="true">6.</strong> Menu</a></li><li class="chapter-item expanded "><a href="Button.html"><strong aria-hidden="true">7.</strong> Button</a></li><li class="chapter-item expanded "><a href="Action.html"><strong aria-hidden="true">8.</strong> Action</a></li><li class="chapter-item expanded "><a href="Requirement-Set.html"><strong aria-hidden="true">9.</strong> Requirement Set</a></li><li class="chapter-item expanded "><a href="Requirement.html"><strong aria-hidden="true">10.</strong> Requirement</a></li><li class="chapter-item expanded "><a href="Item-Modifier.html"><strong aria-hidden="true">11.</strong> Item Modifier</a></li><li class="chapter-item expanded "><a href="Variable.html"><strong aria-hidden="true">12.</strong> Variable</a></li><li class="chapter-item expanded "><a href="Message-Color.html"><strong aria-hidden="true">13.</strong> Message Color</a></li><li class="chapter-item expanded "><a href="Expression-&-Condition.html"><strong aria-hidden="true">14.</strong> Expression & Condition</a></li><li class="chapter-item expanded "><a href="Click-types.html"><strong aria-hidden="true">15.</strong> Click Types</a></li><li class="chapter-item expanded affix "><li class="part-title">Developer</li><li class="chapter-item expanded "><a href="Add-as-a-dependency.html"><strong aria-hidden="true">16.</strong> Add as a dependency</a></li><li class="chapter-item expanded "><a href="https://bettergui-mc.github.io/BetterGUI.html"><strong aria-hidden="true">17.</strong> Javadocs</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -138,10 +138,1300 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="info"><a class="header" href="#info">Info</a></h1>
+                        <h2 id="install"><a class="header" href="#install">Install</a></h2>
+<ol>
+<li>Download the plugin</li>
+<li>Copy/Cut the plugin and paste it to your &quot;plugins&quot; folder</li>
+<li>Start the server to let it load</li>
+<li>Stop the server</li>
+<li>Make some configs and menus</li>
+<li>Start the server and voila</li>
+</ol>
+<h2 id="add-a-menu"><a class="header" href="#add-a-menu">Add a menu</a></h2>
+<ol>
+<li>Go to the plugin folder and open the &quot;menu&quot; folder</li>
+<li>Create a &quot;.yml&quot; file</li>
+<li>Open the created file</li>
+<li>Add some menu settings and buttons</li>
+<li>Save the file</li>
+<li>Reload the plugin</li>
+<li>Done</li>
+</ol>
+<h2 id="add-an-addon"><a class="header" href="#add-an-addon">Add an addon</a></h2>
+<ol>
+<li>Download the addon</li>
+<li>Go to the plugin folder and open the &quot;addon&quot; folder</li>
+<li>Copy/Cut the downloaded jar file and paste it to the folder</li>
+<li>Reload the plugin</li>
+<li>Done</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><div class="table-wrapper"><table><thead><tr><th>Command</th><th>Permission</th><th style="text-align: center">Description</th></tr></thead><tbody>
+<tr><td><code>bettergui</code></td><td>bettergui.help</td><td style="text-align: center">Show available commands and menu commands</td></tr>
+<tr><td><code>addons</code></td><td>bettergui.addons</td><td style="text-align: center">Get the loaded addons</td></tr>
+<tr><td><code>openmenu &lt;filename.yml&gt; [player] [args]</code></td><td>bettergui.openmenu</td><td style="text-align: center">Open the specific menu (for a specific player)</td></tr>
+<tr><td><code>reloadmenu</code></td><td>bettergui.reload</td><td style="text-align: center">Reload all menus</td></tr>
+<tr><td><code>reloadplugin</code></td><td>bettergui.reload</td><td style="text-align: center">Reload the plugin</td></tr>
+<tr><td><code>addondownloader</code></td><td>bettergui.addons.downloader</td><td style="text-align: center">Open the <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Addon-Downloader">Addon Downloader</a></td></tr>
+<tr><td><code>getvariables</code></td><td>bettergui.variable</td><td style="text-align: center">Get the registered variables</td></tr>
+<tr><td><code>gettemplatebuttons</code></td><td>bettergui.templatebuttons</td><td style="text-align: center">Get the registered template buttons</td></tr>
+<tr><td></td><td>bettergui.&lt;filename&gt;.yml</td><td style="text-align: center">The permission that is required to open the menu</td></tr>
+<tr><td></td><td>bettergui.openmenu.bypass</td><td style="text-align: center">Allow the player to open all menus</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="info"><a class="header" href="#info">Info</a></h1>
 <ul>
-<li>This contains all information of all features of this plugin</li>
+<li>This is where you can find and install the additional feature for BetterGUI</li>
+<li>I created enough addons for your basic needs. You just need to download and install them, and possibly read the wiki to understand the addon</li>
 </ul>
+<h1 id="how-to-use"><a class="header" href="#how-to-use">How to use</a></h1>
+<ol>
+<li>Type <code>/addondownloader</code></li>
+<li>The addon menu will open</li>
+<li>Look through the available addons</li>
+<li>You can:
+<ul>
+<li>Left-Click on the addon to download it</li>
+<li>Right-Click on the addon to get the source code</li>
+<li>Middle-Click on the addon to get its wiki or tutorial</li>
+</ul>
+</li>
+<li>Restart your server for your downloaded addons to load</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="configyml"><a class="header" href="#configyml">config.yml</a></h3>
+<pre><code class="language-yaml"># The default type when loading menus from the &quot;menu&quot; folder
+default-menu-type: simple
+
+# The default type when loading buttons from the &quot;menu&quot; folder
+default-button-type: simple
+
+# Enable methics
+metrics: true
+
+# Use BetterGUI's Click Type with support for number keys
+use-modern-click-type: false
+
+# Whether the plugin replaces all similar variables on every check
+replace-all-variables-each-check: true
+
+# Force the inventory to be updated every refresh time
+forced-update-inventory: false
+
+# Use the legacy button that supports the old settings
+use-legacy-button: true
+
+# Command Override
+alternative-command-manager:
+  # Enable the override
+  enable: false
+  # Ignore case-sensitive when checking commands
+  case-insensitive: true
+  # Should we ignore the commands in ignored-commands
+  # If set to false, the plugin will do the opposite (override the commands in ignored-commands)
+  should-ignore: true
+  # The list of ignored commands
+  ignored-commands:
+  - warp test
+</code></pre>
+<hr />
+<h3 id="messagesyml"><a class="header" href="#messagesyml">messages.yml</a></h3>
+<pre><code class="language-yaml">prefix: '&amp;f[&amp;bBetterGUI&amp;f] '
+prefix: '&amp;f[&amp;bBetterGUI&amp;f] '
+no-permission: '&amp;cYou don''t have permission to do this'
+player-only: '&amp;cYou should be a player to do this'
+success: '&amp;aSuccess'
+menu-required: '&amp;cYou should specify a menu'
+menu-not-found: '&amp;cThat menu does not exist'
+cooldown-message: '&amp;cWait for {cooldown_second} secs ({cooldown}) before clicking again'
+have-met-requirement-placeholder: 'Yes'
+invalid-item: '&amp;cUnable to get required item. Inform the staff'
+invalid-number: '&amp;cError converting! {input} is not a valid number'
+invalid-amount: '&amp;cInvalid amount of {input}! Will be set to 1 by default'
+invalid-condition: '&amp;cInvalid condition! Please inform the staff'
+player-not-found: '&amp;cThe player is not found. Maybe he is offline or didn''t join your server'
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="q-why-does-this-plugin-exist"><a class="header" href="#q-why-does-this-plugin-exist">Q: Why does this plugin exist?</a></h2>
+<p><em>A: I used Chest Commands GUI to make menus for a long time. Some other GUI plugins (like DeluxeMenus and BossShop) are awesome, but I'm lazy to learn just to create the menu I want. I want a plugin with the same format as Chest Commands GUI and the features I need. Therefore, I created this.</em></p>
+<h2 id="q-why-does-it-look-like-chest-commands"><a class="header" href="#q-why-does-it-look-like-chest-commands">Q: Why does it look like Chest Commands?</a></h2>
+<p><em>A: Before starting this plugin, I also made a fork for Chest Commands called &quot;Chest Commands GUI - Forked&quot;. Due to some frustrating problems while working with it, I decided to shut it down and make my own. I keep the old style because it's the simplest one and many people have been using it for years.</em></p>
+<h2 id="q-why-should-i-use-this-plugin"><a class="header" href="#q-why-should-i-use-this-plugin">Q: Why should I use this plugin?</a></h2>
+<p><em>A: I don't know. I'm bad at giving you a motivation to use this. There are even a lot of GUI plugins that are somehow better than this. But this plugin preserves some basic features of a GUI plugin should have (like Chest Commands, one of the famous plugin). You can use this to make some basic or animated menus. The style of the menu settings is fairly simple to learn (but the wiki may not). You can join my Discord to get support, I'm happy to help you</em> <br>
+<em>TL;DR: Basic features, simple style, good support</em></p>
+<h2 id="q-why-dont-you-combine-all-features-from-addons-into-one-big-plugin"><a class="header" href="#q-why-dont-you-combine-all-features-from-addons-into-one-big-plugin">Q: Why don't you combine all features from addons into one big plugin?</a></h2>
+<p><em>A: One of the goals of this plugin is to create a plugin that can be used by any type of servers. Since I don't know which feature is commonly used, combining all features would be a waste of resources, as some functions are rarely used. So I give the users the choice of choosing which features they want.</em></p>
+<h2 id="q-why-does-x-not-work"><a class="header" href="#q-why-does-x-not-work">Q: Why does X not work?</a></h2>
+<p><em>A: Join <a href="https://discord.gg/9m4GdFD">my Discord server</a>. I'm there to help you</em></p>
+<h2 id="q-how-to-use-x"><a class="header" href="#q-how-to-use-x">Q: How to use X?</a></h2>
+<p><em>A: Read the wiki</em></p>
+<h2 id="q-why-dont-you-add-support-for-other-head-plugins-like-headdatabase-epicheads-headsplus-etc"><a class="header" href="#q-why-dont-you-add-support-for-other-head-plugins-like-headdatabase-epicheads-headsplus-etc">Q: Why don't you add support for other head plugins? Like HeadDatabase, EpicHeads, HeadsPlus, etc</a></h2>
+<p><em>A: I know you want to easily setup your heads in BetterGUI with their IDs instead of UUIDs, Texture URLs, or Names. However, these head plugins limit their API to just get their items from their databases instead of modifying existing heads. It's annoying to do a workaround to apply your settings to their given heads. Moreover, some head plugins are paid plugins, so I don't buy them and therefore don't have them in my account to test their functions. Finally, it just doesn't make any sense.</em></p>
+<h2 id="q-why-dont-you-add-a-migrator-from-other-gui-plugins-like-chest-commands-gui-deluxemenus-bossshop-trmenu-etc"><a class="header" href="#q-why-dont-you-add-a-migrator-from-other-gui-plugins-like-chest-commands-gui-deluxemenus-bossshop-trmenu-etc">Q: Why don't you add a migrator from other GUI plugins? Like Chest Commands GUI, DeluxeMenus, BossShop, TrMenu, etc</a></h2>
+<p><em>A: Those plugins combine a lot of features into one plugin only. BetterGUI has a different approach, only useful features are in the main plugin, Others are in addons. I won't support all features of these plugins in BetterGUI, because I don't have any reason to create and maintain a converter from their plugins. One more thing, These plugins are not abandoned, the authors still support and update them (Maybe not in a frequent time), so why don't you use them?</em></p>
+<h2 id="q-why-are-you-slow-in-helping-us-on-your-plugins"><a class="header" href="#q-why-are-you-slow-in-helping-us-on-your-plugins">Q: Why are you slow in helping us on your plugins?</a></h2>
+<p><em>A: I'm a human, you know. I have a life, and get busy with it. My plugins are free and I only do these plugins in my free-time, to fulfill my own needs. Therefore, my help support is voluntary, not mandatory, so are my Discord helpers. I may answer your questions when I have time, and I don't have a responsibility to answer your question instantly. Well, my time is important than yours, don't expect me to spend my busy time for free, but if it's in my free time, I can help you.</em></p>
+<h2 id="q-i-dont-like-the-wiki-dont-waste-my-time-make-it-easy-to-use-already-i-dont-understand-how-to-use-it-ill-give-you-1-star-for-this"><a class="header" href="#q-i-dont-like-the-wiki-dont-waste-my-time-make-it-easy-to-use-already-i-dont-understand-how-to-use-it-ill-give-you-1-star-for-this">Q: I don't like the wiki. Don't waste my time. Make it easy to use already. I don't understand how to use it. I'll give you 1 star for this.</a></h2>
+<p><em>A: So you are not a patient person, and want to do everything fast? Well, then you will not get anything useful from this wiki, or any wiki from any big plugins. It takes time to learn something, I don't even encourage you to use this plugin. Your choice is yours. Your time is yours. But sometimes a few things in your life cannot be done fast. Even if it can, it may be done poorly, so I want to avoid it and do slowly and steadily. If you are finding a plugin that is easy or fast to create your dream menus, or has an in-game editor, this is not the place, choose another one. But if you choose this plugin, spend some time reading the full wiki, as you may miss features that are useful. Don't be <a href="https://media.discordapp.net/attachments/660795997135568896/880719938598359081/5kyybg.jpg?width=498&amp;height=663">this meme</a></em></p>
+<h2 id="q-can-you-add-x-to-your-plugin"><a class="header" href="#q-can-you-add-x-to-your-plugin">Q: Can you add X to your plugin?</a></h2>
+<p><em>A: Before requesting, you should check if your request already exists on the <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Addon-Downloader">Addon Downloader</a>. If it does not exist, you can either join <a href="https://discord.gg/9m4GdFD">my Discord server</a> or create <a href="https://github.com/BetterGUI-MC/BetterGUI/issues">an issue</a>.</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="info-1"><a class="header" href="#info-1">Info</a></h1>
+<ul>
+<li>Menus are what BetterGUI is for. It's the thing displayed to the player.</li>
+<li>There are many types of Menu. A developer can also make his own menu and register to the plugin.</li>
+<li>Generally, a menu contains 2 sections: <code>menu-settings</code> and <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Button"><code>Button</code></a></li>
+<li>You can set the type of menu by setting the <code>menu-type</code> value in the <code>menu-settings</code> section</li>
+</ul>
+<h1 id="type-of-menus"><a class="header" href="#type-of-menus">Type of Menus</a></h1>
+<h2 id="simple-menu"><a class="header" href="#simple-menu">Simple Menu</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">menu-settings:
+  menu-type: simple # You don't need to set this type. It's the default value
+
+  # The actions when the player opens the menu
+  open-action:
+  - action
+  - action
+  - action
+  ...
+
+  # The actions when the player closes the menu
+  close-action:
+  - action
+  - action
+  - action
+  ...
+
+  # The type of the display inventory
+  # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html
+  inventory-type: &lt;inventory-type&gt;
+  #inventory: &lt;inventory-type&gt;
+
+  # The rows &lt;1-6&gt; of the inventory if the type is CHEST
+  rows: &lt;1-6&gt;
+  
+  # How frequently the menu will refresh itself
+  auto-refresh: &lt;ticks&gt;
+  #ticks: &lt;ticks&gt;
+
+  # The requirement before the player can open the menu
+  view-requirement:
+    &lt;requirement-set&gt;
+    &lt;requirement-set&gt;
+    &lt;requirement-set&gt;
+    ...
+
+  # The requirement before the player can close the menu
+  close-requirement:
+    &lt;requirement-set&gt;
+    &lt;requirement-set&gt;
+    &lt;requirement-set&gt;
+    ...
+
+  # The permission required to open the menu
+  permission: bettergui.test
+  
+  # The command to open the menu
+  command:
+  - command1
+  - command2
+  ...
+  
+  # The title of the inventory
+  title: &lt;name&gt;
+  #name: &lt;name&gt;
+
+# This is a special button. It will fill all empty slots of the inventory (You don't need to set this button)
+default-button:
+  &lt;button-settings&gt;
+
+button1:
+  &lt;button-settings&gt;
+button2:
+  &lt;button-settings&gt;
+...
+</code></pre>
+<ul>
+<li>None of the <code>menu-settings</code> is required to get the menu working.</li>
+<li>The <code>open-action</code> and <code>close-action</code> use the <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Action">Action</a> value.</li>
+<li>The <code>view-requirement</code> and <code>close-requirement</code> use the <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Requirement-Set">Requirement Set</a> value.</li>
+<li>An example for this can be found <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/master/src/main/resources/menu/example.yml">Here</a></li>
+</ul>
+<h2 id="args-menu"><a class="header" href="#args-menu">Args Menu</a></h2>
+<ul>
+<li>Args Menu is the same as Simple Menu, with 4 more sections in the <code>menu-settings</code>
+<ul>
+<li><code>min-args</code> sets the minimum amount of arguments in the command to open the menu</li>
+<li><code>args</code> sets the arguments</li>
+<li><code>min-args-action</code> sets the <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Action">Action</a> when the number of arguments is lower than <code>min-args</code></li>
+<li><code>default-args</code> sets the default arguments</li>
+</ul>
+</li>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">menu-settings:
+  menu-type: args
+  min-args: &lt;number&gt;
+  args:
+  - arg1
+  - arg2
+  - arg3
+  ...
+  min-args-action:
+  - action
+  - action
+  - action
+  ...
+  default-args: &quot;string with space&quot;
+  &lt;other-settings&gt;
+
+button1:
+  &lt;button-settings&gt;
+button2:
+  &lt;button-settings&gt;
+...
+</code></pre>
+<ul>
+<li>When using this menu, the menu will register some <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Variable">Variables</a> to the plugin:
+<ul>
+<li><code>{menu_&lt;menu-name&gt;_merged_args}</code> returns the completed arguments that the player typed to open the menu <code>&lt;menu-name&gt;</code></li>
+<li><code>{menu_&lt;menu-name&gt;_arg_&lt;arg&gt;}</code> returns the value of the argument at the <code>&lt;arg&gt;</code> position from the menu <code>&lt;menu-name&gt;</code></li>
+</ul>
+</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-yaml"># Replace &lt;menu-name&gt; with your menu name
+menu-settings:
+  menu-type: args
+
+  # The minimum number of arguments is 2
+  min-args: 2
+
+  # Register 2 arguments and register 2 variables to the plugin: {menu_&lt;menu-name&gt;_arg_test} and {menu_&lt;menu-name&gt;_arg_otest}
+  args:
+  - test
+  - otest
+  
+  # Set the default arguments of &quot;test&quot; and &quot;otest&quot; to &quot;hello&quot; and &quot;world&quot;
+  default-args: &quot;hello world&quot;
+  
+  # The action when failed to meet the min-args
+  min-args-action: &quot;tell: &amp;cAt least 2 arguments&quot;
+  ...
+
+# The button
+button:
+  id: stone
+  name: &quot;&amp;bTest Arguments&quot;
+  lore:
+  - &quot;Arg 1: {menu_&lt;menu-name&gt;_arg_test}&quot;
+  - &quot;Arg 2: {menu_&lt;menu-name&gt;_arg_otest}&quot;
+  - &quot;Merged Args: {menu_&lt;menu-name&gt;_merged_args}&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="info-2"><a class="header" href="#info-2">Info</a></h1>
+<ul>
+<li>A button is what is shown in the menu.</li>
+<li>When the player clicks a button, some actions are executed.</li>
+<li>A button can also be updated.</li>
+<li>There are many types of button. A developer can make his own button and register to the plugin.</li>
+<li>You can specify the type of button by setting the <code>type</code> option. By default, it will take the value of <code>default-button-type</code> from <code>config.yml</code></li>
+</ul>
+<h1 id="type-of-button"><a class="header" href="#type-of-button">Type of Button</a></h1>
+<h2 id="empty-button"><a class="header" href="#empty-button">Empty Button</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">button-name:
+  type: empty
+</code></pre>
+<ul>
+<li>This is the simplest and useless button. This represents nothing.</li>
+</ul>
+<h2 id="dummy-button"><a class="header" href="#dummy-button">Dummy Button</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">button-name:
+  type: dummy # aliases: raw
+  modifier1: &lt;value1&gt;
+  modifier2: &lt;value2&gt;
+  modifier3: &lt;value3&gt;
+  ...
+</code></pre>
+<ul>
+<li>This is a decorative button. You can only set the display item of the button through <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Item-Modifier">Item Modifiers</a></li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-yaml">dummy-button:
+  type: dummy
+  id: STONE
+  name: &quot;&amp;eThis is a dummy button&quot;
+</code></pre>
+<h2 id="air-button"><a class="header" href="#air-button">Air Button</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">button-name:
+  type: air
+  # command:
+  action:
+  - &lt;action&gt;
+  - &lt;action&gt;
+  - &lt;action&gt;
+  ...
+  close-on-click: &lt;true/false&gt;
+</code></pre>
+<ul>
+<li>This button represents the Air item, which the player can't see.</li>
+<li>You can only set 2 settings: <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Action"><code>action</code></a> (command) and <code>close-on-click</code></li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-yaml">air-button:
+  type: air
+  command:
+  - &quot;tell: &amp;aOh...&quot;
+  - &quot;delay: 30&quot;
+  - &quot;tell: &amp;aUhhhh... Hello&quot;
+  close-on-click: true
+</code></pre>
+<h2 id="null-button"><a class="header" href="#null-button">Null Button</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">button-name:
+  type: null
+  # command:
+  action:
+  - &lt;action&gt;
+  - &lt;action&gt;
+  - &lt;action&gt;
+  ...
+  close-on-click: &lt;true/false&gt;
+</code></pre>
+<ul>
+<li>This is similar to <strong>Air Button</strong>, but this button represents nothing.</li>
+<li>The difference is that, while <strong>Air Button</strong> overrides the display item and the actions of a slot, this button only overrides the actions of a slot</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-yaml">null-button:
+  type: null
+  command:
+  - &quot;tell: &amp;aOh...&quot;
+  - &quot;delay: 30&quot;
+  - &quot;tell: &amp;aUhhhh... Hello&quot;
+  close-on-click: true
+</code></pre>
+<h2 id="simple-button"><a class="header" href="#simple-button">Simple Button</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">button-name:
+  type: simple # You don't need to set this value. It's the default value
+  modifier1: &lt;value1&gt;
+  modifier2: &lt;value2&gt;
+  modifier3: &lt;value3&gt;
+  ...
+  # command:
+  action:
+  - &lt;action&gt;
+  - &lt;action&gt;
+  - &lt;action&gt;
+  ...
+  close-on-click: &lt;true/false&gt;
+</code></pre>
+<ul>
+<li>This is a combination of <strong>Dummy Button</strong> and <strong>Air Button</strong></li>
+<li>You can set the display item through <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Item-Modifier">Item Modifiers</a>, and also set the 2 settings: <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Action"><code>action</code></a> (command) and <code>close-on-click</code></li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-yaml">simple-button:
+  id: cobblestone
+  name: &quot;&amp;bThis is a simple button&quot;
+  lore:
+  - &quot;&quot;
+  - &quot;&amp;fThis is a lore&quot;
+  action: &quot;tell: &amp;eYou clicked&quot;
+  close-on-click: true
+</code></pre>
+<h2 id="animated-button"><a class="header" href="#animated-button">Animated Button</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">button-name:
+  type: animated # aliases: animate, anim
+  update: &lt;ticks&gt;
+  async: &lt;true/false&gt;
+  shift: &lt;number&gt;
+  reverse: &lt;true/false&gt;
+  child:
+    button1:
+      &lt;button-settings&gt;
+    button2:
+      &lt;button-settings&gt;
+    button3:
+      &lt;button-settings&gt;
+    ...
+</code></pre>
+<ul>
+<li>This is a dynamic button.</li>
+<li>This will iterate through all the <code>child</code> buttons on every <code>update</code> ticks</li>
+<li>You can set the <code>async</code> value to make the <code>update</code> task asynchronously</li>
+<li>You can set the <code>shift</code> value to determine the start frame of the button
+<ul>
+<li>If you set a positive value (call <code>n</code>), the <code>n</code>-th frame will be the start frame</li>
+<li>If you set a negative value (call <code>n</code>), the <code>n</code>-th frame from the bottom will be the start frame </li>
+</ul>
+</li>
+<li>You can set the <code>reverse</code> value to flip the child frames, so the frames will go bottom-up</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-yaml">animated-icon:
+  type: animated
+  update: 5
+  async: false
+  child:
+    frame_icon1:
+      name: &quot;&amp;cFrame 1&quot;
+      id: red_wool
+      lore:
+        - &quot;This is part of an animated icon&quot;
+    frame_icon2:
+      name: &quot;&amp;aFrame 2&quot;
+      id: green_wool
+      lore:
+        - &quot;This is part of an animated icon&quot;
+    frame_icon3:
+      name: &quot;&amp;bFrame 3&quot;
+      id: light_blue_wool
+      lore:
+        - &quot;This is part of an animated icon&quot;
+</code></pre>
+<h2 id="predicate-button"><a class="header" href="#predicate-button">Predicate Button</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">button-name:
+  type: predicate # aliases: requirement
+  button:
+    &lt;button-settings&gt;
+  fallback:
+    &lt;button-settings&gt;
+  view-requirement:
+    &lt;requirement-set&gt;
+    &lt;requirement-set&gt;
+    &lt;requirement-set&gt;
+    ...
+  check-only-on-creation: &lt;true/false&gt;
+  click-requirement:
+    left:
+      &lt;requirement-set&gt;
+      &lt;requirement-set&gt;
+      &lt;requirement-set&gt;
+      ...
+    right:
+      &lt;requirement-set&gt;
+      &lt;requirement-set&gt;
+      &lt;requirement-set&gt;
+      ...
+    middle:
+      &lt;requirement-set&gt;
+      &lt;requirement-set&gt;
+      &lt;requirement-set&gt;
+      ...
+    ...
+    default:
+      &lt;requirement-set&gt;
+      &lt;requirement-set&gt;
+      &lt;requirement-set&gt;
+      ...
+</code></pre>
+<ul>
+<li>This button will show the <code>button</code> if only the player meets the <code>view-requirement</code>, Otherwise the <code>fallback</code> button will be shown.</li>
+<li>You can set the <code>click-requirement</code> value if you want the plugin to check requirements when the player clicks the button.</li>
+<li>You can set the <code>check-only-on-creation</code> value to make the button only check <code>view-requirement</code> when the player opens the menu.</li>
+<li>Example:
+<ul>
+<li>https://github.com/BetterGUI-MC/BetterGUI/blob/42cf770e3e8bcb2dd6ca8e8b7264cca2c8bffb0d/src/main/resources/menu/example.yml#L143-L160</li>
+<li>https://github.com/BetterGUI-MC/BetterGUI/blob/42cf770e3e8bcb2dd6ca8e8b7264cca2c8bffb0d/src/main/resources/menu/example.yml#L296-L307</li>
+</ul>
+</li>
+</ul>
+<h2 id="list-button"><a class="header" href="#list-button">List Button</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">button-name:
+  type: list
+  keep-current-index: &lt;true/false&gt;
+  child:
+    button1:
+      &lt;button-settings&gt;
+    button2:
+      &lt;button-settings&gt;
+    button3:
+      &lt;button-settings&gt;
+    ...
+</code></pre>
+<ul>
+<li>This button will look through all the <code>child</code> buttons (top-down) and display a button if it can be shown</li>
+<li>You can set the <code>keep-current-index</code> value to make this button only check when the player opens the menu</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-yaml">list-icon:
+  type: list
+  keep-current-index: false
+  child:
+    world:
+      type: predicate
+      button:
+        id: grass
+        name: &quot;&amp;aYou are in {world}&quot;
+      view-requirement:
+        condition:
+          # STREQ: Compare 2 strings if they are the same
+          condition: STREQ(&quot;{world}&quot;, &quot;world&quot;)
+    nether:
+      type: predicate
+      button:
+        id: netherrack
+        name: &quot;&amp;cYou are in {world}&quot;
+      view-requirement:
+        condition:
+          condition: STREQ(&quot;{world}&quot;, &quot;world_nether&quot;)
+    unknown:
+      id: bedrock
+      name: &quot;&amp;cYou are in {world}&quot;
+      lore:
+        - &quot;&amp;cUnknown world&quot;
+</code></pre>
+<h2 id="template-button"><a class="header" href="#template-button">Template Button</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">button-name:
+  type: template
+  template: &lt;name&gt; # The name from template-buttons.yml
+  variable:
+    &lt;variable1&gt;: &lt;value1&gt;
+    &lt;variable2&gt;: &lt;value2&gt;
+    ...
+  &lt;button-settings&gt;
+</code></pre>
+<ul>
+<li>This button reduces the time you make the same button for every slots by setting it in a single template button in the <code>template</code> folder
+<ul>
+<li>The <code>template</code> folder is basically a folder containing <code>yml</code> files defining common buttons to use in all menus</li>
+<li>You can get the registered template buttons by using the command <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Command-&amp;-Permission"><code>gettemplatebuttons</code></a></li>
+</ul>
+</li>
+<li>For example, You can reduce the time you set these buttons with this button</li>
+</ul>
+<pre><code class="language-yaml"># Not using template-buttons.yml
+button1:
+  id: stone
+  name: &quot;&amp;cThis is button&quot;
+  lore:
+  - &quot;This is a line&quot;
+  - &quot;This is a 2 line&quot;
+  - &quot;This is a 3 line&quot;
+  - &quot;This is a 4 line&quot;
+  command: &quot;tell: &amp;cYou clicked&quot;
+
+button2:
+  id: stone
+  name: &quot;&amp;cThis is button&quot;
+  lore:
+  - &quot;This is a line&quot;
+  - &quot;This is a 2 line&quot;
+  - &quot;This is a 3 line&quot;
+  - &quot;This is a 4 line&quot;
+  command: &quot;tell: &amp;cYou clicked this again&quot;
+</code></pre>
+<pre><code class="language-yaml"># Using template-buttons.yml
+button1:
+  type: template
+  template: test # The name from template-buttons.yml
+  command: &quot;tell: &amp;cYou clicked&quot;
+button2:
+  type: template
+  template: test # The name from template-buttons.yml
+  command: &quot;tell: &amp;cYou clicked this again&quot;
+
+# Template File
+test:
+  id: stone
+  name: &quot;&amp;cThis is button&quot;
+  lore:
+  - &quot;This is a line&quot;
+  - &quot;This is a 2 line&quot;
+  - &quot;This is a 3 line&quot;
+  - &quot;This is a 4 line&quot;
+</code></pre>
+<ul>
+<li>You can use the <code>variable</code> option and set the variables for the template button. That will help you to create many buttons with different attributes from one single template button.</li>
+</ul>
+<pre><code class="language-yaml"># This will create 4 buttons with different XP amount. These buttons give XP to the player
+test-xp-100:
+  type: template
+  template: test-xp
+  variable:
+    xp: 100
+
+test-xp-200:
+  type: template
+  slot: 12
+  template: test-xp
+  variable:
+    xp: 200
+
+test-xp-300:
+  type: template
+  template: test-xp
+  variable:
+    xp: 300
+
+test-xp-400:
+  type: template
+  template: test-xp
+  variable:
+    xp: 400
+
+# Template File
+test-xp:
+  id: paper
+  name: &quot;&amp;eGive &amp;f{xp} XP&quot;
+  lore:
+  - &quot;&quot;
+  - &quot;&amp;fThis is a test template button&quot;
+  command: &quot;console: xp {xp} {player}&quot;
+
+# Notice that the template button has {xp} in it. It will be replaced with the value from the variables of the button using this template button
+</code></pre>
+<ul>
+<li>Example:
+<ul>
+<li>Menu: https://github.com/BetterGUI-MC/BetterGUI/blob/50adf60cb54992d7b5fd97bb0ec2515d3526adc4/src/main/resources/menu/example.yml#L392-L439</li>
+<li>Templates: https://github.com/BetterGUI-MC/BetterGUI/blob/master/src/main/resources/template/example-template.yml</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="info-3"><a class="header" href="#info-3">Info</a></h1>
+<ul>
+<li>Actions are used when you want to execute something on certain events (broadcast everyone when the player clicked the button, etc).</li>
+<li>There are many types of actions. There will be listed in the sections below. A developer can also create his own action and register to this plugin.</li>
+</ul>
+<h1 id="type-of-action"><a class="header" href="#type-of-action">Type of Action</a></h1>
+<h2 id="menu"><a class="header" href="#menu">Menu</a></h2>
+<h3 id="back"><a class="header" href="#back">Back</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>back-menu</code></li>
+<li><code>backmenu</code></li>
+</ul>
+</li>
+<li>This action will send the player to his previous menu, or close the current menu if there is no previous menu</li>
+</ul>
+<h3 id="close"><a class="header" href="#close">Close</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>close-menu</code></li>
+<li><code>closemenu</code></li>
+</ul>
+</li>
+<li>This action will close the current menu</li>
+</ul>
+<h3 id="update"><a class="header" href="#update">Update</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>update-menu</code></li>
+<li><code>updatemenu</code></li>
+</ul>
+</li>
+<li>This action will execute the update task of the current menu</li>
+</ul>
+<h3 id="open"><a class="header" href="#open">Open</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>open-menu: &lt;menu_name&gt;</code></li>
+<li><code>open: &lt;menu_name&gt;</code></li>
+<li><code>menu: &lt;menu_name&gt;</code></li>
+</ul>
+</li>
+<li>This action will open the menu named <code>&lt;menu_name&gt;</code></li>
+<li>If you want to open the menu named <code>test.yml</code>, the correct action will be <code>open-menu: test.yml</code>, <code>open: test.yml</code> or <code>menu: test.yml</code></li>
+</ul>
+<h2 id="executor"><a class="header" href="#executor">Executor</a></h2>
+<h3 id="console"><a class="header" href="#console">Console</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>console: &lt;command&gt;</code></li>
+</ul>
+</li>
+<li>This action will execute the command <code>&lt;command&gt;</code> as the console (terminal)</li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L77">Here</a></li>
+</ul>
+<h3 id="player"><a class="header" href="#player">Player</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>&lt;command&gt;</code></li>
+<li><code>player: &lt;command&gt;</code></li>
+</ul>
+</li>
+<li>This action will execute the command <code>&lt;command&gt;</code> as a player</li>
+<li>This is the default type of all actions, so you can specific the action without the prefix <code>player:</code></li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L39">Here</a></li>
+</ul>
+<h3 id="op"><a class="header" href="#op">OP</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>op: &lt;command&gt;</code></li>
+</ul>
+</li>
+<li>This action will execute the command <code>&lt;command&gt;</code> as an OP player</li>
+<li>This action will give the player OP <code>/op</code>, execute the <code>&lt;command&gt;</code> and then de-op the player</li>
+<li>Since it uses <code>/op</code>, this action is considered &quot;dangerous&quot;. A hacker can use a Crasher to exploit the action</li>
+</ul>
+<h3 id="permission"><a class="header" href="#permission">Permission</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>permission: &lt;permission&gt; &lt;command&gt;</code></li>
+</ul>
+</li>
+<li>This action will give the <code>&lt;permission&gt;</code> to the player, execute the <code>&lt;command&gt;</code> and then retrieve the <code>&lt;permission&gt;</code></li>
+<li>This is a safe way to execute the commands that require a specific permission, without touching the <code>/op</code> command</li>
+<li>You know EssentialsX right? I love the <code>/fly</code> command of that plugin, but it requires me to have the permission <code>essentials.fly</code>. If you want to enable the fly function for the player, without using the <code>/op</code> command, here is the action you want: <code>permission: essentials.fly fly</code></li>
+</ul>
+<h2 id="message"><a class="header" href="#message">Message</a></h2>
+<h3 id="broadcast"><a class="header" href="#broadcast">Broadcast</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>broadcast: &lt;message&gt;</code></li>
+</ul>
+</li>
+<li>This action will send the <code>&lt;message&gt;</code> to every online players</li>
+<li>This example action will send the message &quot;Hello&quot; to every online players: <code>broadcast: Hello</code></li>
+</ul>
+<h3 id="tell"><a class="header" href="#tell">Tell</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>tell: &lt;message&gt;</code></li>
+</ul>
+</li>
+<li>This action will send the <code>&lt;message&gt;</code> to the player</li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L124">Here</a></li>
+</ul>
+<h2 id="sound"><a class="header" href="#sound">Sound</a></h2>
+<h3 id="music"><a class="header" href="#music">Music</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>music: &lt;sheet&gt;</code></li>
+</ul>
+</li>
+<li>This will run the <code>&lt;sheet&gt;</code> and send the sound to the player</li>
+<li>This is a complicated action. The explanation on how to make a <code>&lt;sheet&gt;</code> can be found <a href="https://github.com/CryptoMorin/XSeries/blob/ceff291550d50a413d9f50d71b95e690c3bfa94a/src/main/java/com/cryptomorin/xseries/NoteBlockMusic.java#L133-L178">here</a></li>
+</ul>
+<h3 id="sound-1"><a class="header" href="#sound-1">Sound</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>sound: &lt;sound&gt; [volume] [pitch]</code></li>
+</ul>
+</li>
+<li>This action will send the <code>&lt;sound&gt;</code> to the player</li>
+<li>You can specify the <code>[volume]</code> and the <code>[pitch]</code> of the <code>&lt;sound&gt;</code>. Those are optional</li>
+<li>The list of sounds: <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html">Sounds</a></li>
+</ul>
+<h3 id="raw-sound"><a class="header" href="#raw-sound">Raw Sound</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>raw-sound: &lt;sound&gt;, [volume], [pitch]</code></li>
+</ul>
+</li>
+<li>This action will send the <code>&lt;sound&gt;</code> to the player</li>
+<li>The <code>&lt;sound&gt;</code> uses the Minecraft sound's name, so it also supports custom sounds from Resource Pack. If the <code>&lt;sound&gt;</code> can not be found, the action is simply ignored</li>
+<li>You can specify the <code>[volume]</code> and the <code>[pitch]</code> of the <code>&lt;sound&gt;</code>. Those are optional</li>
+</ul>
+<h2 id="misc"><a class="header" href="#misc">Misc</a></h2>
+<h3 id="condition"><a class="header" href="#condition">Condition</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>condition: &lt;condition&gt;</code></li>
+</ul>
+</li>
+<li>The action will check if the player meets the <code>&lt;condition&gt;</code>. If he doesn't, the actions after this will be ignored.</li>
+<li>For example, this action will check if the level of the player is higher than 5: <code>condition: {level} &gt; 5</code></li>
+</ul>
+<h3 id="delay"><a class="header" href="#delay">Delay</a></h3>
+<ul>
+<li><strong>The format</strong>
+<ul>
+<li><code>delay: &lt;ticks&gt;</code></li>
+</ul>
+</li>
+<li>This action will delay the action flow in <code>&lt;ticks&gt;</code> ticks (20 ticks = 1 second)</li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L195">Here</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="info-4"><a class="header" href="#info-4">Info</a></h1>
+<ul>
+<li>A requirement set is a set of requirements that the player are required to pass.</li>
+<li>It consists of:
+<ul>
+<li>The <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Requirement">Requirements</a></li>
+<li>The <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Action"><code>success-command</code></a> when the player passes all requirements</li>
+<li>The <a href="https://github.com/BetterGUI-MC/BetterGUI/wiki/Action"><code>fail-command</code></a> when the player doesn't pass any of the requirements (rarely used)</li>
+</ul>
+</li>
+</ul>
+<h1 id="example"><a class="header" href="#example">Example</a></h1>
+<pre><code class="language-yaml">nether_world: # The requirement set's name
+  condition: STREQ(&quot;{world}&quot;, &quot;world_nether&quot;) # The condition requirement
+  level: 10 # The level requirement
+  success-command: # Actions when the player passes the requirements
+  - &quot;tell: &amp;aYou are in nether&quot;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="info-5"><a class="header" href="#info-5">Info</a></h1>
+<ul>
+<li>Requirement is one of the interesting parts of the plugin.</li>
+<li>It is used when you want to check if the player meets some sort of requirements before doing anything (Check the level before opening the menu, etc).</li>
+<li>There are many types of requirements, which will be listed below. A developer can also make his own requirement type and register it to the plugin.</li>
+</ul>
+<h1 id="type-of-requirement"><a class="header" href="#type-of-requirement">Type of Requirement</a></h1>
+<h2 id="cooldown"><a class="header" href="#cooldown">Cooldown</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">cooldown: &lt;seconds&gt;
+</code></pre>
+<ul>
+<li>This requirement will check if the player is not in a cooldown timer. After checking successfully, the cooldown timer will start for the player.</li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L216">Here</a></li>
+</ul>
+<h2 id="condition-1"><a class="header" href="#condition-1">Condition</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">condition: &lt;condition&gt;
+</code></pre>
+<pre><code class="language-yaml">condition:
+- &lt;condition&gt;
+- &lt;condition&gt;
+- &lt;condition&gt;
+...
+</code></pre>
+<ul>
+<li>This requirement will check if the player meets some certain <code>&lt;condition&gt;</code></li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L281">Here</a></li>
+</ul>
+<h2 id="level"><a class="header" href="#level">Level</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">level: &lt;level&gt;
+</code></pre>
+<pre><code class="language-yaml">level:
+  value: &lt;level&gt;
+  take: &lt;true/false&gt;
+</code></pre>
+<ul>
+<li>This requirement will check if the level of the player is higher or equal to the <code>&lt;level&gt;</code></li>
+<li>You can specify the <code>take</code> value (<code>true</code> or <code>false</code>) to allow/disallow the plugin to take the level of the player alter checking successfully</li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L307">Here</a></li>
+</ul>
+<h2 id="permission-1"><a class="header" href="#permission-1">Permission</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">permission: &lt;permission&gt;
+</code></pre>
+<pre><code class="language-yaml">permission:
+- &lt;permission&gt;
+- &lt;permission&gt;
+- &lt;permission&gt;
+...
+</code></pre>
+<ul>
+<li>This requirement will check if the player has the <code>&lt;permission&gt;</code></li>
+<li>You can add <code>-</code> before <code>&lt;permission&gt;</code> to indicate that the plugin should check if the player doesn't have the <code>&lt;permission&gt;</code></li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L150">Here</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="info-6"><a class="header" href="#info-6">Info</a></h1>
+<ul>
+<li>Item Modifier is the property of an item. It describes what the final item should be.</li>
+<li>There are a lot of modifiers for items. A developer can also make his own modifier and register to the plugin.</li>
+</ul>
+<h1 id="modifiers"><a class="header" href="#modifiers">Modifiers</a></h1>
+<h2 id="material"><a class="header" href="#material">Material</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">material: &lt;material&gt;
+id: &lt;material&gt;
+mat: &lt;material&gt;
+</code></pre>
+<ul>
+<li>This modifier will set the <code>&lt;material&gt;</code> of the item</li>
+<li><a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html">List of Materials</a></li>
+<li>You can see a lot of examples of this modifier in the example menu</li>
+</ul>
+<h2 id="raw-material"><a class="header" href="#raw-material">Raw Material</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">raw-material: &lt;material&gt;
+raw-id: &lt;material&gt;
+raw-mat: &lt;material&gt;
+</code></pre>
+<ul>
+<li>This modifier will set the <code>&lt;material&gt;</code> of the item</li>
+<li>This uses your server version of <code>&lt;material&gt;</code>, so it supports custom materials (Probably from Forge/Bukkit server like Mohist)</li>
+</ul>
+<h2 id="name"><a class="header" href="#name">Name</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">name: &quot;&lt;name&gt;&quot;
+</code></pre>
+<ul>
+<li>This modifier will set the display <code>&lt;name&gt;</code> of the item</li>
+<li>You can see a lot of examples of this modifier in the example menu</li>
+</ul>
+<h2 id="lore"><a class="header" href="#lore">Lore</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">lore: &lt;lore&gt;
+</code></pre>
+<pre><code class="language-yaml">lore:
+- &lt;lore&gt;
+- &lt;lore&gt;
+- &lt;lore&gt;
+...
+</code></pre>
+<ul>
+<li>This modifier will set the <code>&lt;lore&gt;</code> of the item</li>
+<li>You can see a lot of examples of this modifier in the example menu</li>
+</ul>
+<h2 id="amount"><a class="header" href="#amount">Amount</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">amount: &lt;amount&gt;
+</code></pre>
+<ul>
+<li>This modifier will set the <code>&lt;amount&gt;</code> of the item</li>
+<li>You can see a lot of examples of this modifier in the example menu</li>
+</ul>
+<h2 id="durability"><a class="header" href="#durability">Durability</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">durability: &lt;durability&gt;
+damage: &lt;durability&gt;
+</code></pre>
+<ul>
+<li>This modifier will set the <code>&lt;durability&gt;</code> of the item</li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L53">Here</a></li>
+</ul>
+<h2 id="enchantment"><a class="header" href="#enchantment">Enchantment</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">enchantment:
+- &lt;enchantment&gt;, [level]
+- &lt;enchantment&gt;, [level]
+- &lt;enchantment&gt;, [level]
+...
+</code></pre>
+<pre><code class="language-yaml">enchant:
+- &lt;enchantment&gt;, [level]
+- &lt;enchantment&gt;, [level]
+- &lt;enchantment&gt;, [level]
+...
+</code></pre>
+<pre><code class="language-yaml">enc:
+- &lt;enchantment&gt;, [level]
+- &lt;enchantment&gt;, [level]
+- &lt;enchantment&gt;, [level]
+...
+</code></pre>
+<ul>
+<li>This modifier will add the <code>&lt;enchantment&gt;</code>s to the item</li>
+<li><a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html">List of Enchantments</a></li>
+<li>You can set the <code>[level]</code> of the <code>&lt;enchantment&gt;</code>. It's optional.</li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L62-L63">Here</a></li>
+</ul>
+<h2 id="item-flag"><a class="header" href="#item-flag">Item Flag</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">flag:
+- &lt;flag&gt;
+- &lt;flag&gt;
+- &lt;flag&gt;
+...
+</code></pre>
+<pre><code class="language-yaml">item-flags:
+- &lt;flag&gt;
+- &lt;flag&gt;
+- &lt;flag&gt;
+...
+</code></pre>
+<pre><code class="language-yaml">itemflag:
+- &lt;flag&gt;
+- &lt;flag&gt;
+- &lt;flag&gt;
+...
+</code></pre>
+<pre><code class="language-yaml">itemflags:
+- &lt;flag&gt;
+- &lt;flag&gt;
+- &lt;flag&gt;
+...
+</code></pre>
+<pre><code class="language-yaml">item-flag:
+- &lt;flag&gt;
+- &lt;flag&gt;
+- &lt;flag&gt;
+...
+</code></pre>
+<ul>
+<li>This modifier will add the <code>&lt;flag&gt;</code> to the item</li>
+<li><a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/ItemFlag.html">List of flags</a></li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L229-L230">Here</a></li>
+</ul>
+<h2 id="potion-effect"><a class="header" href="#potion-effect">Potion Effect</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">potion:
+- &lt;potion&gt; [duration] [amplifier]
+- &lt;potion&gt; [duration] [amplifier]
+- &lt;potion&gt; [duration] [amplifier]
+...
+</code></pre>
+<pre><code class="language-yaml">effect:
+- &lt;potion&gt; [duration] [amplifier]
+- &lt;potion&gt; [duration] [amplifier]
+- &lt;potion&gt; [duration] [amplifier]
+...
+</code></pre>
+<ul>
+<li>This modifier will add the <code>&lt;potion&gt;</code> effect to the item</li>
+<li><a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html">List of Potion Effects</a></li>
+<li>You can set the <code>[duration]</code> and <code>[amplifier]</code> of the <code>&lt;potion&gt;</code> effect. These are optional.</li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L384-L386">Here</a></li>
+</ul>
+<h2 id="skull"><a class="header" href="#skull">Skull</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">skull: &lt;skull&gt;
+head: &lt;skull&gt;
+skull-owner: &lt;skull-owner&gt;
+</code></pre>
+<ul>
+<li>This modifier will set the <code>&lt;skull&gt;</code> of the item</li>
+<li><code>&lt;skull&gt;</code> accepts a player name, an UUID (unique id), an Base64 value, or a <code>texture.minecraft.net</code> URL</li>
+<li>An example for this can be found in the example menu: <a href="https://github.com/BetterGUI-MC/BetterGUI/blob/17209a29e6b9948fd15991916a25a42763a68c6a/src/main/resources/menu/example.yml#L367-L370">Here</a></li>
+</ul>
+<h2 id="nbt"><a class="header" href="#nbt">NBT</a></h2>
+<ul>
+<li><strong>The format</strong></li>
+</ul>
+<pre><code class="language-yaml">nbt: &lt;nbt&gt;
+nbt-data: &lt;nbt&gt;
+</code></pre>
+<ul>
+<li>This modifier will apply the <code>&lt;nbt&gt;</code> to the item</li>
+<li>Example: </li>
+</ul>
+<pre><code class="language-yaml">nbt: '{display: {color: 8910400}}'
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="info-7"><a class="header" href="#info-7">Info</a></h1>
+<ul>
+<li>Variable (or sometimes Placeholder) is a special string that will be replaced to a value that is relative to the player.</li>
+<li>Variables can be seen as the string inside curly brackets <code>{}</code>. We will see some of these variables in the next section.</li>
+<li>An admin can use the command <code>/getvaraibles</code> to get the list of registered variables</li>
+<li>You can use variables in your text by putting them in curly brackets. For example, <code>Hello {player}!</code> will say hello to the player, with <code>{player}</code> replaced to the player's name.</li>
+</ul>
+<h1 id="built-in-variables"><a class="header" href="#built-in-variables">Built-in variables</a></h1>
+<ul>
+<li><code>{player}</code> returns the player's name</li>
+<li><code>{uuid}</code> returns the unique id of the player</li>
+<li><code>{online}</code> returns the number of online players</li>
+<li><code>{max_players}</code> returns the max capacity of players in the server</li>
+<li><code>{world}</code> returns the current world of the player</li>
+<li><code>{world_env}</code> returns the environment of the current world of the player</li>
+<li><code>{x}</code> returns the current X position of the player</li>
+<li><code>{y}</code> returns the current Y position of the player</li>
+<li><code>{z}</code> returns the current Z position of the player</li>
+<li><code>{bed_world}</code> returns the current world of the player's bed</li>
+<li><code>{bed_world_env}</code> returns the environment of the current world of the player's bed</li>
+<li><code>{bed_x}</code> returns the current X position of the player's bed</li>
+<li><code>{bed_y}</code> returns the current Y position of the player's bed</li>
+<li><code>{bed_z}</code> returns the current Z position of the player's bed</li>
+<li><code>{exp}</code> returns the experiences (XP) of the player</li>
+<li><code>{level}</code> returns the level of the player</li>
+<li><code>{exp_to_level}</code> returns the required XP to go to the next level</li>
+<li><code>{food_level}</code> returns the food level of the player</li>
+<li><code>{ip}</code> returns the IP address of the player</li>
+<li><code>{biome}</code> returns the current biome in the player's current location</li>
+<li><code>{ping}</code> returns the latency of the player's connection</li>
+<li><code>{random_&lt;i&gt;}</code> or <code>{random_&lt;i1&gt;:&lt;i2}}</code> returns a random number from 0 to <code>&lt;i&gt;</code>, or from <code>&lt;i1&gt;</code> to <code>&lt;i2&gt;</code></li>
+<li><code>{condition_&lt;expression&gt;}</code> returns the final value (result) after evaluating the <code>&lt;expression&gt;</code></li>
+</ul>
+<h1 id="menu-variables"><a class="header" href="#menu-variables">Menu variables</a></h1>
+<ul>
+<li>Variables start with <code>menu_</code> are called Menu Variables.</li>
+<li>Those variables are generated by the menu.</li>
+<li>I can not tell what menu variables are used for. But they have different functions.</li>
+<li>For example, you can see some variables from the example menu:
+<ul>
+<li><code>{menu_example.yml_button_advanced_cooldown_click_default_reqset_test_cooldown}</code></li>
+<li><code>{menu_example.yml_button_cooldown_click_default_reqset_test-cooldown_cooldown}</code></li>
+<li><code>{menu_example.yml_button_requirement-set_click_default_reqset_nether_world_level}</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="hook-to-placeholderapi"><a class="header" href="#hook-to-placeholderapi">Hook to PlaceholderAPI</a></h1>
+<ul>
+<li>You can use placeholders from PlaceholderAPI in your text.</li>
+<li>You can also use variables from BetterGUI to other plugins via PlaceholderAPI</li>
+<li>The format for this is <code>%bettergui_&lt;variable&gt;%</code> (<code>&lt;variable&gt;</code> is a variable without the curly brackets <code>{}</code>)</li>
+<li>For example, this is the placeholder to use <code>{player}</code> in other plugins: <code>%bettergui_player%</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basic-color"><a class="header" href="#basic-color">Basic Color</a></h1>
+<ul>
+<li>Some options that accepts a string can also support colors in that string</li>
+<li>You can use colors to &quot;colorize&quot; the string. If you have been using other plugins that interact with messages and texts, you may be familiar with some color characters (<code>&amp;c</code>, <code>&amp;b</code>, etc) or a combination of color and transformation (<code>&amp;c&amp;l</code>, <code>&amp;b&amp;o&amp;l</code>, etc).</li>
+<li><a href="https://minecraft.tools/en/color-code.php">Color codes</a></li>
+<li>You can use <code>&amp;u</code> to get the random color for the text</li>
+</ul>
+<h1 id="hex-color"><a class="header" href="#hex-color">HEX Color</a></h1>
+<ul>
+<li>After the 5.0 update, BetterGUI now supports HEX color (the thing with 3 Red Green Blue values) in texts and messages.</li>
+<li>You can use it by using the HEX format <code>&amp;#rrggbb</code> (<code>rr</code>, <code>gg</code> and <code>bb</code> are the value of the red, green and blue channel of the color, from <code>00</code> to <code>FF</code>)</li>
+<li>For example, <code>&amp;#FF0000</code> represents the red color. <code>&amp;#FF0000Hello World!</code> will return the red <code>Hello World!</code></li>
+<li><a href="https://www.google.com/search?q=Hex+color">HEX Color</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="info-8"><a class="header" href="#info-8">Info</a></h1>
+<ul>
+<li>You may notice in some of the previous sections that I gave some weird values in some settings of the example menus like <code>STREQ(&quot;{world}&quot;, &quot;world&quot;)</code> and <code>{level} &gt; 5</code></li>
+<li>Those are called Expression. That's the way we make complicated things in the menu (set the amount based on the level of the player, let the player click when the current world is the overworld, etc)</li>
+<li>We will talk about Expressions in the next sections</li>
+</ul>
+<h1 id="basic"><a class="header" href="#basic">Basic</a></h1>
+<ul>
+<li>The basic is the use of math operators in the expressions (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, etc)</li>
+<li>Examples:</li>
+</ul>
+<pre><code class="language-yaml">amount: &quot;5 + 7&quot; # The amount will be 11
+</code></pre>
+<pre><code class="language-yaml">amount: &quot;{level} % 64 + 1&quot; # The amount will be from 1 to 64, based on the level 
+</code></pre>
+<ul>
+<li>Along with math operators, you can also use Boolean operators (<code>&gt;</code>, <code>&lt;</code>, <code>=</code>, <code>&gt;=</code>, <code>&lt;=</code>, etc) to compare values.</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-yaml">condition: &quot;{level} &gt; 5&quot; # This will check if the player's level is higher than 5
+</code></pre>
+<ul>
+<li><a href="https://github.com/uklimaschewski/EvalEx#supported-operators">Supported Operators</a></li>
+</ul>
+<h1 id="function"><a class="header" href="#function">Function</a></h1>
+<ul>
+<li>Functions are the process of &quot;input to output&quot;, take the input and returns the corresponding output.</li>
+<li><a href="https://github.com/uklimaschewski/EvalEx">Functions</a></li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-yaml">amount: &quot;FLOOR(SQRT(18))&quot; # The amount will be the floor value of the square root of 18, which is 4
+</code></pre>
+<h1 id="string-functions"><a class="header" href="#string-functions">String Functions</a></h1>
+<ul>
+<li>BetterGUI also accepts comparing strings with String Functions</li>
+<li>It includes:
+<ul>
+<li><code>STRCT(&quot;this&quot;, &quot;is&quot;)</code> check if <code>is</code> is in <code>this</code> (<code>this</code> contains <code>is</code>)</li>
+<li><code>STREDW(&quot;String&quot;, &quot;ing&quot;)</code> check if <code>String</code> ends with <code>ing</code></li>
+<li><code>STREQ(&quot;str1&quot;, &quot;str1&quot;)</code> check if <code>str1</code> equals <code>str1</code></li>
+<li><code>STREQIC(&quot;str1&quot;, &quot;str1&quot;)</code> check if <code>str1</code> equals <code>str1</code> (case-insensitive)</li>
+<li><code>STRLEN(&quot;Hello World&quot;)</code> get the length of <code>Hello World</code></li>
+<li><code>STRMP(&quot;String&quot;, &quot;String-?&quot;)</code> check if <code>String</code> matches the RegExr pattern <code>String-?</code></li>
+<li><code>STRSTW(&quot;String&quot;, &quot;Str&quot;)</code> check if <code>String</code> starts with <code>Str</code></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="info-9"><a class="header" href="#info-9">Info</a></h1>
+<ul>
+<li>You may notice, in the example menu, there are some weird values in <code>command</code> (<code>action</code>) and <code>click-requirement</code>.</li>
+<li>What are those <code>left</code>, <code>right</code>, <code>middle</code> and <code>default</code>?</li>
+<li>Those are called the click types. It indicates the different behaviors of the button on different click types (left-click, right-click, middle-click, etc).</li>
+<li><a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/ClickType.html">List of Click Types</a></li>
+<li>Along with the clicktypes, you can set a <code>default</code> click type, whose behaviors will be set on all available click types.</li>
+</ul>
+<h1 id="click-types-in-action"><a class="header" href="#click-types-in-action">Click Types in <code>action</code></a></h1>
+<pre><code class="language-yaml">COMMAND:
+  LEFT: 'tell: &amp;cYou left-clicked'
+  RIGHT: 'tell: &amp;cYou right-clicked'
+  MIDDLE: 'tell: &amp;cYou middle-clicked'
+  # Default for every click types
+  DEFAULT:
+    - &quot;tell: &amp;cUnknown click type&quot;
+    - &quot;tell: Left, Right, Middle only&quot;
+</code></pre>
+<h1 id="click-types-in-click-requirement"><a class="header" href="#click-types-in-click-requirement">Click Types in <code>click-requirement</code></a></h1>
+<pre><code class="language-yaml">click-requirement:
+  left:
+    test:
+      cooldown: 10
+  right:
+    test:
+      cooldown: 20
+  middle:
+    test:
+      cooldown: 30
+  default:
+    test:
+      cooldown: 40
+    fail-command:
+      - &quot;tell: &amp;cCalm down&quot;
+</code></pre>
+<h1 id="number_key-with-number-key"><a class="header" href="#number_key-with-number-key"><code>NUMBER_KEY</code> with number key</a></h1>
+<ul>
+<li><strong>The format</strong>: <code>NUMBER_KEY_&lt;0-8&gt;</code></li>
+<li>You can set the <code>NUMBER_KEY</code> click type with a number key (from <code>0</code> to <code>8</code>, specify the <code>1</code> to <code>9</code> number key)</li>
+<li>This requires <code>use-modern-click-type</code> to be enabled</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>Add this in your <code>&lt;repositories&gt;</code></li>
+</ul>
+<pre><code class="language-xml">    &lt;repository&gt;
+      &lt;id&gt;codemc-repo&lt;/id&gt;
+      &lt;url&gt;https://repo.codemc.io/repository/maven-public/&lt;/url&gt;
+    &lt;/repository&gt;
+</code></pre>
+<ul>
+<li>Add this in your <code>&lt;dependencies&gt;</code></li>
+</ul>
+<pre><code class="language-xml">    &lt;dependency&gt;
+      &lt;groupId&gt;me.HSGamer&lt;/groupId&gt;
+      &lt;artifactId&gt;BetterGUI&lt;/artifactId&gt;
+      &lt;version&gt;VERSION&lt;/version&gt;
+      &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;/dependency&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="javadocs"><a class="header" href="#javadocs">Javadocs</a></h1>
 
                     </main>
 
