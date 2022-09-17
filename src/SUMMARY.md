@@ -26,4 +26,4 @@
 # Developer
 
 * [Add as a dependency](./Add-as-a-dependency.md)
-* [Javadocs](https://bettergui-mc.github.io/BetterGUI)
+* [Javadocs](./Javadocs.md)
