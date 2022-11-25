@@ -58,6 +58,10 @@ menu-settings:
   title: <name>
   #name: <name>
 
+  # Save the display to the cache for later use
+  # This option is mainly used to fix a "self-open" issue when the player open the same menu
+  cached: <true/false>
+
 # This is a special button. It will fill all empty slots of the inventory (You don't need to set this button)
 default-button:
   <button-settings>
