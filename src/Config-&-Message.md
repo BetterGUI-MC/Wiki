@@ -1,4 +1,6 @@
-### config.yml
+# Config & Message
+
+## config.yml
 ```yaml
 # The default type when loading menus from the "menu" folder
 default-menu-type: simple
@@ -34,8 +36,8 @@ alternative-command-manager:
   ignored-commands:
   - warp test
 ```
-***
-### messages.yml
+
+## messages.yml
 ```yaml
 prefix: '&f[&bBetterGUI&f] '
 prefix: '&f[&bBetterGUI&f] '

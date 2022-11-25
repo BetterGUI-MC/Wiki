@@ -1,3 +1,5 @@
+# Basic Tutorial
+
 ## Install
 1. Download the plugin
 2. Copy/Cut the plugin and paste it to your "plugins" folder
@@ -5,6 +7,7 @@
 4. Stop the server
 5. Make some configs and menus
 6. Start the server and voila
+
 ## Add a menu
 1. Go to the plugin folder and open the "menu" folder
 2. Create a ".yml" file
@@ -13,6 +16,7 @@
 5. Save the file
 6. Reload the plugin
 7. Done
+
 ## Add an addon
 1. Download the addon
 2. Go to the plugin folder and open the "addon" folder

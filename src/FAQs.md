@@ -1,3 +1,5 @@
+# FAQs
+
 ## Q: Why does this plugin exist?
 _A: I used Chest Commands GUI to make menus for a long time. Some other GUI plugins (like DeluxeMenus and BossShop) are awesome, but I'm lazy to learn just to create the menu I want. I want a plugin with the same format as Chest Commands GUI and the features I need. Therefore, I created this._
 
@@ -30,4 +32,4 @@ _A: I'm a human, you know. I have a life, and get busy with it. My plugins are f
 _A: So you are not a patient person, and want to do everything fast? Well, then you will not get anything useful from this wiki, or any wiki from any big plugins. It takes time to learn something, I don't even encourage you to use this plugin. Your choice is yours. Your time is yours. But sometimes a few things in your life cannot be done fast. Even if it can, it may be done poorly, so I want to avoid it and do slowly and steadily. If you are finding a plugin that is easy or fast to create your dream menus, or has an in-game editor, this is not the place, choose another one. But if you choose this plugin, spend some time reading the full wiki, as you may miss features that are useful. Don't be [this meme](https://media.discordapp.net/attachments/660795997135568896/880719938598359081/5kyybg.jpg?width=498&height=663)_
 
 ## Q: Can you add X to your plugin?
-_A: Before requesting, you should check if your request already exists on the [Addon Downloader](https://github.com/BetterGUI-MC/BetterGUI/wiki/Addon-Downloader). If it does not exist, you can either join [my Discord server](https://discord.gg/9m4GdFD) or create [an issue](https://github.com/BetterGUI-MC/BetterGUI/issues)._
+_A: Before requesting, you should check if your request already exists on the [Addon Downloader](./menu/addon-downloader.md). If it does not exist, you can either join [my Discord server](https://discord.gg/9m4GdFD) or create [an issue](https://github.com/BetterGUI-MC/BetterGUI/issues)._

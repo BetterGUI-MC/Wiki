@@ -1,3 +1,5 @@
+# Add as a dependency
+
 * Add this in your `<repositories>`
 ```xml
     <repository>

@@ -4,7 +4,6 @@
 
 * [Tutorial](./Basic-tutorial.md)
 * [Command & Permission](./Command-&-Permission.md)
-* [Addon Downloader](./Addon-Downloader.md)
 * [Config & Message](./Config-&-Message.md)
 * [FAQs](./FAQs.md)
 
@@ -12,7 +11,8 @@
 
 * [Menu](./Menu.md)
   * [Simple Menu](./menu/simple-menu.md)
-  * [Args Menu](./menu/args-menus.md)
+  * [Args Menu](./menu/args-menu.md)
+  * [Addon Downloader](./menu/addon-downloader.md)
 * [Button](./Button.md)
   * [Empty Button](./button/empty-button.md)
   * [Dummy Button](./button/dummy-button.md)
@@ -56,7 +56,6 @@
 
 ## Misc
 * [Message Color](./Message-Color.md)
-* [Expression & Condition](./Expression-&-Condition.md)
 * [Click Types](./Click-types.md)
 
 # Developer

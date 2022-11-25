@@ -32,4 +32,5 @@ spawn-cmd:
 
 ## Built-ins
 * [Simple Menu](./menu/simple-menu.md)
-* [Args Menu](./menu/args-menus.md)
+* [Args Menu](./menu/args-menu.md)
+* [Addon Downloader](./menu/addon-downloader.md)

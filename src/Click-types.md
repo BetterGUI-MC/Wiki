@@ -1,10 +1,13 @@
-# Info
+# Click Types
+
+## Description
 * You may notice, in the example menu, there are some weird values in `command` (`action`) and `click-requirement`.
 * What are those `left`, `right`, `middle` and `default`?
 * Those are called the click types. It indicates the different behaviors of the button on different click types (left-click, right-click, middle-click, etc).
 * [List of Click Types](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/ClickType.html)
 * Along with the clicktypes, you can set a `default` click type, whose behaviors will be set on all available click types.
-# Click Types in `action`
+
+## In `action`
 ```yaml
 COMMAND:
   LEFT: 'tell: &cYou left-clicked'
@@ -15,7 +18,8 @@ COMMAND:
     - "tell: &cUnknown click type"
     - "tell: Left, Right, Middle only"
 ```
-# Click Types in `click-requirement`
+
+## In `click-requirement`
 ```yaml
 click-requirement:
   left:
@@ -33,7 +37,8 @@ click-requirement:
     fail-command:
       - "tell: &cCalm down"
 ```
-# `NUMBER_KEY` with number key
+
+## `NUMBER_KEY` with number key
 * **The format**: `NUMBER_KEY_<0-8>`
 * You can set the `NUMBER_KEY` click type with a number key (from `0` to `8`, specify the `1` to `9` number key)
 * This requires `use-modern-click-type` to be enabled
