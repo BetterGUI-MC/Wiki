@@ -2,12 +2,12 @@
 
 ## Description
 * Actions are used when you want to execute something on certain events (broadcast everyone when the player clicked the button, etc).
-* There are many types of actions. There will be listed in the sections below. A developer can also create his own action and register to this plugin.
+* There are many built-in types of actions. There will be listed in the sections below. A developer can also create his own action and register to this plugin.
 
 ## Example
 ```yaml
 hello:
-  COMMAND: 
+  COMMAND: # Here are the actions
   - 'tell: &eHello There'
   - 'delay: 60'
   - 'tell: &eHello Again'
@@ -17,7 +17,7 @@ hello:
   POSITION-Y: 1
 ```
 
-## Builtins
+## Built-ins
 * [Back Menu](./action/back-menu.md)
 * [Close Menu](./action/close-menu.md)
 * [Open Menu](./action/open-menu.md)

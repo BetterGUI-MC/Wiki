@@ -1,0 +1,47 @@
+# List Button
+
+## Format
+```yaml
+button-name:
+  type: list
+  keep-current-index: <true/false>
+  child:
+    button1:
+      <button-settings>
+    button2:
+      <button-settings>
+    button3:
+      <button-settings>
+    ...
+```
+
+## Description
+* This button will look through all the [`child`](../Button.md) buttons (top-down) and display a button if it can be shown
+* You can set the `keep-current-index` value to make this button only check when the player opens the menu
+
+## Example
+```yaml
+list-icon:
+  type: list
+  keep-current-index: false
+  child:
+    level_5:
+      type: predicate
+      button:
+        id: grass
+        name: "&aYou are in Level 5"
+      view-requirement:
+        level:
+          level: 5
+    level_5:
+      type: predicate
+      button:
+        id: netherrack
+        name: "&cYou are in Level 3"
+      view-requirement:
+        level:
+          level: 3
+    low_level:
+      id: bedrock
+      name: "&cYou are low level"
+```
