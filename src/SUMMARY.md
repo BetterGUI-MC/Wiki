@@ -38,6 +38,9 @@
   * [Delay](./action/delay.md)
 * [Requirement Set](./Requirement-Set.md)
 * [Requirement](./Requirement.md)
+  * [Cooldown Requirement](./requirement/cooldown-requirement.md)
+  * [Level Requirement](./requirement/level-requirement.md)
+  * [Permission Requirement](./requirement/permission-requirement.md)
 * [Item Modifier](./Item-Modifier.md)
 * [Variable](./Variable.md)
 
