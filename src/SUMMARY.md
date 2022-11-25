@@ -42,6 +42,16 @@
   * [Level Requirement](./requirement/level-requirement.md)
   * [Permission Requirement](./requirement/permission-requirement.md)
 * [Item Modifier](./Item-Modifier.md)
+  * [Material](item-modifier/material-modifier.md)
+  * [Name](item-modifier/name-modifier.md)
+  * [Lore](item-modifier/lore-modifier.md)
+  * [Amount](item-modifier/amount-modifier.md)
+  * [Durability](item-modifier/durability-modifier.md)
+  * [Enchantment](item-modifier/enchantment-modifier.md)
+  * [Item Flag](item-modifier/flag-modifier.md)
+  * [Potion Effect](item-modifier/potion-modifier.md)
+  * [Skull](item-modifier/skull-modifier.md)
+  * [NBT](item-modifier/nbt-modifier.md)
 * [Variable](./Variable.md)
 
 ## Misc
