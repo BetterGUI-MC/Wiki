@@ -54,11 +54,13 @@
   * [NBT](item-modifier/nbt-modifier.md)
 * [Variable](./Variable.md)
 
-## Misc
+# Misc
+
 * [Message Color](./Message-Color.md)
 * [Click Types](./Click-types.md)
 
-## Addon
+# Addon
+
 * [Advanced Cooldown](addon/advanced-cooldown.md)
 * [AnvilGUI](addon/anvil-gui.md)
 * [ASCII-Placholders](addon/ascii-placeholders.md)
