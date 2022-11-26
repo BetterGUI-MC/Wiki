@@ -8,4 +8,6 @@ title = "BetterGUI"
 [output.html]
 git-repository-url = "https://github.com/BetterGUI-MC/Wiki"
 git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/BetterGUI-MC/Wiki/edit/main/{path}"
 site-url = "/Wiki/"
+no-section-label = false
