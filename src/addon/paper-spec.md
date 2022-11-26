@@ -1,6 +1,9 @@
 # PaperSpec
 > [Code](https://github.com/BetterGUI-MC/PaperSpec/) | [Download](https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/PaperSpec/)
 
+## Description
+This addon add functions that only works on [PaperMC](https://papermc.io/) and its forks.
+
 ## Item Modifier
 
 ### Skull Modifier
