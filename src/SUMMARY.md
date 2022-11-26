@@ -58,6 +58,24 @@
 * [Message Color](./Message-Color.md)
 * [Click Types](./Click-types.md)
 
+## Addon
+* [Advanced Cooldown](addon/advanced-cooldown.md)
+* [AnvilGUI](addon/anvil-gui.md)
+* [ASCII-Placholders](addon/ascii-placeholders.md)
+* [Block Listener](addon/block-listener.md)
+* [Bungee Link](addon/bungee-link.md)
+* [Complex Text Sender](addon/complex-text-sender.md)
+* [Item Gotcha](addon/item-gotcha.md)
+* [Item Listener](addon/item-listener.md)
+* [NPC Opener](addon/npc-opener.md)
+* [OptEco Bridge](addon/opt-eco-bridge.md)
+* [PlayerPoints Bridge](addon/player-points-bridge.md)
+* [TokenManager Bridge](addon/token-manager-bridge.md)
+* [Vault Bridge](addon/vault-bridge.md)
+* [Switch Icon](addon/switch-icon.md)
+* [Target Menu](addon/target-menu.md)
+* [World And Region](addon/world-and-region.md)
+
 # Developer
 
 * [Add as a dependency](./Add-as-a-dependency.md)

@@ -28,4 +28,5 @@ button:
 
 ## Description
 * This is a special menu that displays the available addons of BetterGUI.
-* You can view & download the addons and read their wiki
+* You can view the addons and read their wiki
+* You can also download addons and they'll be installed automatically (Requires restarting the server after downloading to enable the addons)
