@@ -4,13 +4,22 @@
 ```yaml
 menu-settings:
   menu-type: addon
+  
+  # The name of the menu
   name: '&c&lAddon Downloader'
+  
+  # The rows of the menu
   rows: 3
+  
+  # The command to open the menu
   command:
     - addondownloader
     - addondl
+    
+  # The period in ticks to refresh the menu
   auto-refresh: 5
 
+# The button for each addon
 button:
   material:
     - LIGHT_BLUE_STAINED_GLASS_PANE
