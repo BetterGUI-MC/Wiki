@@ -1,6 +1,9 @@
 # XCross
 > [Code](https://github.com/BetterGUI-MC/XCross/) | [Download](https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/XCross/)
 
+## Description
+This addon integrates XSeries to BetterGUI so that you can use version-independent values in some item modifiers & actions.
+
 ## Item Modifier
 
 ### Material Modifier
