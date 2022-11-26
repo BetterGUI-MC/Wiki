@@ -29,7 +29,6 @@
 * `{biome}` returns the current biome in the player's current location
 * `{ping}` returns the latency of the player's connection
 * `{random_<i>}` or `{random_<i1>:<i2}}` returns a random number from 0 to `<i>`, or from `<i1>` to `<i2>`
-* `{condition_<expression>}` returns the final value (result) after evaluating the `<expression>`
 
 ## Menu variables
 * Variables start with `menu_` are called Menu Variables.

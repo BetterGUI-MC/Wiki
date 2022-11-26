@@ -41,6 +41,7 @@
   * [Cooldown Requirement](./requirement/cooldown-requirement.md)
   * [Level Requirement](./requirement/level-requirement.md)
   * [Permission Requirement](./requirement/permission-requirement.md)
+  * [Condition Requirement](requirement/condition-requirement.md)
 * [Item Modifier](./Item-Modifier.md)
   * [Material](item-modifier/material-modifier.md)
   * [Name](item-modifier/name-modifier.md)
@@ -77,6 +78,9 @@
 * [Switch Icon](addon/switch-icon.md)
 * [Target Menu](addon/target-menu.md)
 * [World And Region](addon/world-and-region.md)
+* [XCross](addon/x-cross.md)
+* [PaperSpec](addon/paper-spec.md)
+* [EvalExtra](addon/eval-extra.md)
 
 # Developer
 

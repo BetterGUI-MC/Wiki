@@ -32,3 +32,4 @@ permission-list:
 * [Cooldown Requirement](./requirement/cooldown-requirement.md)
 * [Level Requirement](./requirement/level-requirement.md)
 * [Permission Requirement](./requirement/permission-requirement.md)
+* [Condition Requirement](requirement/condition-requirement.md)
