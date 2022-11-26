@@ -1,5 +1,6 @@
 # OptEco Bridge
 > [Code](https://github.com/BetterGUI-MC/OptEcoBridge/) | [Download](https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/OptEcoBridge/)
+
 > Depend: [OptEcoPrime](https://www.spigotmc.org/resources/optecoprime-1-8-1-17-sqlite-mysql-mongodb.95245/)
 
 ## Variable

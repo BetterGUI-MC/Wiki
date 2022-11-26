@@ -1,5 +1,6 @@
 # Vault Bridge
 > [Code](https://github.com/BetterGUI-MC/VaultBridge/) | [Download](https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/VaultBridge/)
+
 > Depend: [Vault](https://www.spigotmc.org/resources/vault.34315/)
 
 ## Variable

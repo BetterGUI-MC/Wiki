@@ -1,5 +1,6 @@
 # TokenManager Bridge
 > [Code](https://github.com/BetterGUI-MC/TokenManagerBridge/) | [Download](https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/TokenManagerBridge/)
+
 > Depend: [TokenManager](https://www.spigotmc.org/resources/tokenmanager.8610/)
 
 ## Variable

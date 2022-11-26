@@ -1,5 +1,6 @@
 # NPC Opener
 > [Code](https://github.com/BetterGUI-MC/NPC-Opener/) | [Download](https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/NPC-Opener/)
+
 > Depend: [Citizens](https://www.spigotmc.org/resources/citizens.13811/)
 
 ## Command

@@ -1,5 +1,6 @@
 # PlayerPoints Bridge
 > [Code](https://github.com/BetterGUI-MC/PlayerPointsBridge/) | [Download](https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/PlayerPointsBridge/)
+
 > Depend: [PlayerPoints](https://www.spigotmc.org/resources/playerpoints.80745/)
 
 ## Variable

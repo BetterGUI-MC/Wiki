@@ -1,5 +1,6 @@
 # Bungee Link
 > [Code](https://github.com/BetterGUI-MC/BungeeLink/) | [Download](https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/BungeeLink/)
+
 > Depend: [BungeeCord](https://www.spigotmc.org/wiki/bungeecord/) or its forks
 
 ## Action
