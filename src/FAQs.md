@@ -14,7 +14,7 @@ _TL;DR: Basic features, simple style, good support_
 _A: One of the goals of this plugin is to create a plugin that can be used by any type of servers. Since I don't know which feature is commonly used, combining all features would be a waste of resources, as some functions are rarely used. So I give the users the choice of choosing which features they want._
 
 ## Q: Why does X not work?
-_A: Join [my Discord server](https://discord.gg/9m4GdFD). I'm there to help you_
+_A: Join [my Discord server](https://discord.gg/5vpVM6g4SV). I'm there to help you_
 
 ## Q: How to use X?
 _A: Read the wiki_
