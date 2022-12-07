@@ -33,7 +33,7 @@ list-icon:
       view-requirement:
         level:
           level: 5
-    level_5:
+    level_3:
       type: predicate
       button:
         id: netherrack
