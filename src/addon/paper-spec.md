@@ -59,8 +59,8 @@ Note that the legacy color codes (`&c`, `&3`) does not work in the
 minimessage:
   position-x: 1
   position-y: 1
-  name$: "<rainbow>Rainbow Name"
-  lore$:
+  mini-name: "<rainbow>Rainbow Name"
+  mini-lore:
     - "<b>Bold text"
     - "<aqua>Simple color!"
     - "<#00ff00>R G B color!"
