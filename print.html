@@ -2719,7 +2719,7 @@ per-player-skull:
 <p><a href="https://github.com/BetterGUI-MC/PaperSpec/">Code</a> | <a href="https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/PaperSpec/">Download</a></p>
 </blockquote>
 <h2 id="description-73"><a class="header" href="#description-73">Description</a></h2>
-<p>This addon add functions that only works on <a href="https://papermc.io/">PaperMC</a> and its forks.</p>
+<p>This addon add functions that only works on <a href="https://papermc.io/">PaperMC</a> and its forks. This addon requires Paper 1.18 or newer to work.</p>
 <h2 id="item-modifier-2"><a class="header" href="#item-modifier-2">Item Modifier</a></h2>
 <h3 id="skull-modifier-2"><a class="header" href="#skull-modifier-2">Skull Modifier</a></h3>
 <h4 id="format-65"><a class="header" href="#format-65">Format</a></h4>
@@ -2747,16 +2747,42 @@ per-player-skull:
   id: player_head
   paper-skull: &quot;{player}&quot;
 </code></pre>
+<h3 id="displayname--lore"><a class="header" href="#displayname--lore">DisplayName &amp; Lore</a></h3>
+<h4 id="format-66"><a class="header" href="#format-66">Format</a></h4>
+<pre><code class="language-yaml">mini-name: &lt;minimessage formatting text&gt;
+mini-lore:
+- &lt;minimessage formatting text&gt;
+- &lt;minimessage formatting text&gt;
+- ...
+</code></pre>
+<h4 id="description-75"><a class="header" href="#description-75">Description</a></h4>
+<p>You can use <a href="https://docs.adventure.kyori.net/minimessage/index.html">MiniMessage formatting</a> for the name and lore of your menu items. Just make sure you use the new format below instead of the original <code>name</code> and <code>lore</code> modifiers.</p>
+<p>There are aliases for the modifiers. You can also use <code>name$</code> for the <code>mini-name</code>, and <code>lore$</code> for the <code>mini-lore</code>.</p>
+<p>Note that the legacy color codes (<code>&amp;c</code>, <code>&amp;3</code>) does not work in the</p>
+<h4 id="example-61"><a class="header" href="#example-61">Example</a></h4>
+<pre><code class="language-yaml">minimessage:
+  position-x: 1
+  position-y: 1
+  name$: &quot;&lt;rainbow&gt;Rainbow Name&quot;
+  lore$:
+    - &quot;&lt;b&gt;Bold text&quot;
+    - &quot;&lt;aqua&gt;Simple color!&quot;
+    - &quot;&lt;#00ff00&gt;R G B color!&quot;
+    - &quot;&lt;gradient:green:blue&gt;Gradient color!&quot;
+    - &quot;&lt;transition:#00ff00:#ff0000:0&gt;Transition color!&quot;
+    - &quot;&lt;font:myfont:custom_font&gt;Uses a custom font from a resource pack&quot;
+    - &quot;&lt;lang:block.minecraft.diamond_block&gt; &lt;- this is a translatable text&quot;
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="evalextra"><a class="header" href="#evalextra">EvalExtra</a></h1>
 <blockquote>
 <p><a href="https://github.com/BetterGUI-MC/EvalExtra/">Code</a> | <a href="https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/EvalExtra/">Download</a></p>
 </blockquote>
-<h2 id="description-75"><a class="header" href="#description-75">Description</a></h2>
+<h2 id="description-76"><a class="header" href="#description-76">Description</a></h2>
 <ul>
 <li>This is an addon to apply math expressions in some settings of the menu</li>
 <li>With this, you can write advanced math in menu. Especially, this addon is useful to write advanced conditions in <a href="addon/../requirement/condition-requirement.html">Condition Requirement</a></li>
 </ul>
-<h2 id="example-61"><a class="header" href="#example-61">Example</a></h2>
+<h2 id="example-62"><a class="header" href="#example-62">Example</a></h2>
 <pre><code class="language-yaml">stone:
   id: stone
   amount: &quot;25 + 3&quot;

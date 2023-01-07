@@ -152,7 +152,7 @@
 <p><a href="https://github.com/BetterGUI-MC/PaperSpec/">Code</a> | <a href="https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/PaperSpec/">Download</a></p>
 </blockquote>
 <h2 id="description"><a class="header" href="#description">Description</a></h2>
-<p>This addon add functions that only works on <a href="https://papermc.io/">PaperMC</a> and its forks.</p>
+<p>This addon add functions that only works on <a href="https://papermc.io/">PaperMC</a> and its forks. This addon requires Paper 1.18 or newer to work.</p>
 <h2 id="item-modifier"><a class="header" href="#item-modifier">Item Modifier</a></h2>
 <h3 id="skull-modifier"><a class="header" href="#skull-modifier">Skull Modifier</a></h3>
 <h4 id="format"><a class="header" href="#format">Format</a></h4>
@@ -179,6 +179,32 @@ per-player-skull:
   name: &quot;&amp;bPer Player Skulls&quot;
   id: player_head
   paper-skull: &quot;{player}&quot;
+</code></pre>
+<h3 id="displayname--lore"><a class="header" href="#displayname--lore">DisplayName &amp; Lore</a></h3>
+<h4 id="format-1"><a class="header" href="#format-1">Format</a></h4>
+<pre><code class="language-yaml">mini-name: &lt;minimessage formatting text&gt;
+mini-lore:
+- &lt;minimessage formatting text&gt;
+- &lt;minimessage formatting text&gt;
+- ...
+</code></pre>
+<h4 id="description-2"><a class="header" href="#description-2">Description</a></h4>
+<p>You can use <a href="https://docs.adventure.kyori.net/minimessage/index.html">MiniMessage formatting</a> for the name and lore of your menu items. Just make sure you use the new format below instead of the original <code>name</code> and <code>lore</code> modifiers.</p>
+<p>There are aliases for the modifiers. You can also use <code>name$</code> for the <code>mini-name</code>, and <code>lore$</code> for the <code>mini-lore</code>.</p>
+<p>Note that the legacy color codes (<code>&amp;c</code>, <code>&amp;3</code>) does not work in the</p>
+<h4 id="example-1"><a class="header" href="#example-1">Example</a></h4>
+<pre><code class="language-yaml">minimessage:
+  position-x: 1
+  position-y: 1
+  name$: &quot;&lt;rainbow&gt;Rainbow Name&quot;
+  lore$:
+    - &quot;&lt;b&gt;Bold text&quot;
+    - &quot;&lt;aqua&gt;Simple color!&quot;
+    - &quot;&lt;#00ff00&gt;R G B color!&quot;
+    - &quot;&lt;gradient:green:blue&gt;Gradient color!&quot;
+    - &quot;&lt;transition:#00ff00:#ff0000:0&gt;Transition color!&quot;
+    - &quot;&lt;font:myfont:custom_font&gt;Uses a custom font from a resource pack&quot;
+    - &quot;&lt;lang:block.minecraft.diamond_block&gt; &lt;- this is a translatable text&quot;
 </code></pre>
 
                     </main>
