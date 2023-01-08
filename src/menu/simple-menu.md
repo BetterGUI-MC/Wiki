@@ -61,6 +61,9 @@ menu-settings:
   # Save the display to the cache for later use
   # This option is mainly used to fix a "self-open" issue when the player open the same menu
   cached: <true/false>
+  
+  # The creator to create the inventory. Mainly used to create custom inventories provided by addons.
+  creator: default
 
 # This is a special button. It will fill all empty slots of the inventory (You don't need to set this button)
 default-button:
