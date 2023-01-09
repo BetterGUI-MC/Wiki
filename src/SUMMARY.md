@@ -81,6 +81,7 @@
 * [XCross](addon/x-cross.md)
 * [PaperSpec](addon/paper-spec.md)
 * [EvalExtra](addon/eval-extra.md)
+* [Dynamic Title](addon/dynamic-title.md)
 
 # Developer
 
