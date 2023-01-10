@@ -48,4 +48,4 @@ menu-settings:
 
 ## Note
 
-- Sometimes when you closed the menu, the menu would not close. It's a known (and wont-fix) bug because of how the packet was sent. You may have to set the `title-period` higher to reduce the chance the bug occurs.
+- Sometimes when you close the menu, the menu will not close. It's a known (and wont-fix) bug because of how the packet is sent. You may have to set the `title-period` higher to reduce the chance the bug occurs.
