@@ -82,6 +82,7 @@
 * [PaperSpec](addon/paper-spec.md)
 * [EvalExtra](addon/eval-extra.md)
 * [Dynamic Title](addon/dynamic-title.md)
+* [ItemBridge Hook](addon/itembridge-hook.md)
 
 # Developer
 
