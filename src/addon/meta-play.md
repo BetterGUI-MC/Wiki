@@ -25,6 +25,6 @@ T:
   id: diamond
   name: "&b&lMeta: &f{meta_number_diamond_count}"
   command:
-    left: "meta-number: diamond_count {value} + 1" # Requires [EvalExtra](./eval-extra.md) to use expressions
+    left: "meta-number: diamond_count {value} + 1" # Requires EvalExtra to use expressions
     right: "meta: diamond_count 0"
 ```
