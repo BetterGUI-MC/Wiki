@@ -83,6 +83,7 @@
 * [EvalExtra](addon/eval-extra.md)
 * [Dynamic Title](addon/dynamic-title.md)
 * [ItemBridge Hook](addon/itembridge-hook.md)
+* [MetaPlay](addon/meta-play.md)
 
 # Developer
 
