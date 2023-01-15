@@ -8,6 +8,7 @@
 | `reloadmenu` | bettergui.reload | Reload all menus |
 | `reloadplugin` | bettergui.reload | Reload the plugin |
 | `getvariables` | bettergui.variable | Get the registered variables | 
+| `getvariables <filename.yml>` | bettergui.variable | Get the registered variables for a menu | 
 | `gettemplatebuttons` | bettergui.templatebuttons | Get the registered template buttons | 
 | | bettergui.\<filename\>.yml | The permission that is required to open the menu |
 | | bettergui.openmenu.bypass | Allow the player to open all menus |
