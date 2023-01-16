@@ -85,6 +85,10 @@
 * [ItemBridge Hook](addon/itembridge-hook.md)
 * [MetaPlay](addon/meta-play.md)
 
+# Premium
+
+* [Masked GUI](premium/masked-gui.md)
+
 # Developer
 
 * [Add as a dependency](./Add-as-a-dependency.md)
