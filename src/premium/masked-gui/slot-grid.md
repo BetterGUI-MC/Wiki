@@ -18,7 +18,7 @@ demo-slot:
 
 ![Slot Demo 1](images/slot-demo1.png)
 
-You can see that I have set the `slot` to `0-53` which means that the slot will be applied to all slots in the menu.
+You can see that I have set the `slot` to `0-53` which means that the `demo-slot` will be applied to all slots in the menu.
 
 What if I want to use `slot` to specify a grid of slots, like a 3x3 grid in the middle of the menu?
 
