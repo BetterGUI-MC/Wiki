@@ -87,7 +87,7 @@
 
 # Premium
 
-* [Masked GUI](premium/masked-gui.md)
+* [MaskedGUI](premium/masked-gui.md)
 
 # Developer
 
