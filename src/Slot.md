@@ -39,23 +39,17 @@ slot: 0
 
 You can also specify multiple slots for an item. This is useful if you want to create a button that takes up more than one slot.
 
-Example:
-
 ```yaml
 slot: 0, 1, 2, 3, 4, 5, 6, 7, 8
 ```
 
 If you want to specify a range of slots, you can use the range format (`<first>-<last>`).
 
-Example:
-
 ```yaml
 slot: 0-8
 ```
 
 If you want to go crazy and specify both a range and a list of slots, you can do that too.
-
-Example:
 
 ```yaml
 slot: 0-8, 9, 17, 18-26
