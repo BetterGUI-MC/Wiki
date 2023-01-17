@@ -1,6 +1,6 @@
 # Slot Grid
 
-Let's extend the concept of [Slot](../Slot.md) to add more features to it.
+Let's extend the concept of [Slot](../../Slot.md) to add more features to it.
 
 Start with this simple menu
 
