@@ -13,6 +13,7 @@
   * [Simple Menu](./menu/simple-menu.md)
   * [Args Menu](./menu/args-menu.md)
   * [Addon Downloader](./menu/addon-downloader.md)
+* [Slot](./Slot.md)
 * [Button](./Button.md)
   * [Empty Button](./button/empty-button.md)
   * [Dummy Button](./button/dummy-button.md)
