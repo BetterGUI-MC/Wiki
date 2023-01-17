@@ -12,7 +12,7 @@ You can use this to make a simple menu
 
 ## Built-in
 
-* Simple Mask
+* [Simple Mask](./mask/simple-mask.md)
 * Multi-Slot Mask
 * Pattern Mask
 * Progress Mask
