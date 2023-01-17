@@ -77,9 +77,9 @@ demo-slot:
 
 ![Slot Demo 2](images/slot-demo2.png)
 
-Cool, right? But what if I only want the outer border of the grid?
+Cool, right? But what if I want only the outer border of the grid?
 
-You can but `-o` at the end of the `slot` to specify that you want the outer border of the grid.
+You can put `-o` at the end of the `slot` to specify that you want the outer border of the grid.
 
 ```yaml
 demo-slot:
