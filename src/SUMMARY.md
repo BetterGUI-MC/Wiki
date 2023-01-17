@@ -89,6 +89,8 @@
 # Premium
 
 * [MaskedGUI](premium/masked-gui.md)
+  * [Slot Grid](premium/masked-gui/slot-grid.md)
+  * [Mask](premium/masked-gui/mask.md)
 
 # Developer
 
