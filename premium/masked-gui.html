@@ -167,6 +167,45 @@
   rows: 6
   ...
 </code></pre>
+<h2 id="slot-grid"><a class="header" href="#slot-grid">Slot Grid</a></h2>
+<p>Let's extend the concept of <a href="../Slot.html">Slot</a> to add more features to it.</p>
+<p>Start with this simple menu</p>
+<pre><code class="language-yaml">menu-settings:
+  menu-type: masked
+  command: demo
+  title: &quot;&amp;c&amp;lDemo&quot;
+  rows: 6
+
+demo-slot:
+  slot: 0-53
+  id: emerald
+</code></pre>
+<p><img src="images/slot-demo1.png" alt="Slot Demo 1" /></p>
+<p>You can see that I have set the <code>slot</code> to <code>0-53</code> which means that the slot will be applied to all slots in the menu.</p>
+<p>What if I want to use <code>slot</code> to specify a grid of slots, like a 3x3 grid in the middle of the menu?</p>
+<p>Here is where I'll introduce a new format for <code>slot</code> called <strong>Slot Grid</strong>.</p>
+<pre><code class="language-yaml">slot: &lt;x1&gt;-&lt;y1&gt;-&lt;x2&gt;-&lt;y2&gt;
+</code></pre>
+<p><code>&lt;x1&gt;</code> and <code>&lt;y1&gt;</code> are the coordinates of the top-left corner of the grid.</p>
+<p><code>&lt;x2&gt;</code> and <code>&lt;y2&gt;</code> are the coordinates of the bottom-right corner of the grid.</p>
+<p>For example, I can replicate the previous menu by using <code>slot: 1-1-9-6</code>.</p>
+<pre><code class="language-yaml">demo-slot:
+  slot: 1-1-9-6
+  id: emerald
+</code></pre>
+<p>Or I can make a 3x3 grid in the middle of the menu by using <code>slot: 4-2-6-4</code>.</p>
+<pre><code class="language-yaml">demo-slot:
+  slot: 4-2-6-4
+  id: emerald
+</code></pre>
+<p><img src="images/slot-demo2.png" alt="Slot Demo 2" /></p>
+<p>Cool, right? But what if I only want the outer border of the grid?</p>
+<p>You can but <code>-o</code> at the end of the <code>slot</code> to specify that you want the outer border of the grid.</p>
+<pre><code class="language-yaml">demo-slot:
+  slot: 1-1-9-6-o
+  id: emerald
+</code></pre>
+<p><img src="images/slot-demo3.png" alt="Slot Demo 3" /></p>
 <h2 id="mask"><a class="header" href="#mask">Mask</a></h2>
 <p><strong>Mask</strong> is a new component in which you can specify the logic on how the <a href="../Button.html">Buttons</a> are displayed. This creates new possibilities to make more creative menus from your crazy ideas.</p>
 <p>You can use this to make a simple menu</p>
