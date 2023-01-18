@@ -23,4 +23,4 @@ You can use this to make a simple menu
 * [List Mask](./mask/list-mask.md)
 * [Button Paginated Mask](./mask/button-paginated-mask.md)
 * [Sequence Paginated Mask](./mask/sequence-paginated-mask.md)
-* Mask Paginated Mask 
+* [Mask Paginated Mask](./mask/mask-paginated-mask.md)
