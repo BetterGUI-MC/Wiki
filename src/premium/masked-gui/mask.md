@@ -16,7 +16,7 @@ You can use this to make a simple menu
 * [Multi-Slot Mask](./mask/multi-slot-mask.md)
 * [Pattern Mask](./mask/pattern-mask.md)
 * [Progress Mask](./mask/progress-mask.md)
-* Hybrid Mask
+* [Hybrid Mask](./mask/hybrid-mask.md)
 * Animated Mask
 * One-Time Animated Mask
 * Predicate Mask
