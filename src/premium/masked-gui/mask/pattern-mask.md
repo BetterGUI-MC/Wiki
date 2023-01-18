@@ -21,7 +21,10 @@ mask-name:
     ...
 ```
 
-The name of each button in the `child` section is the character that is used to draw on the pattern. The character must be unique.
+## Note
+
+* `pattern`: The pattern that will be drawn. The pattern is a list of strings. Each string represents a row of the pattern. The length of each string must be the same. The character in the string represents the button that will be drawn on that position. The character must be unique.
+* The name of each button in the `child` section is the character that is used to draw on the pattern. The character must be unique.
 
 ## Example
 

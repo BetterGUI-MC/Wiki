@@ -16,6 +16,13 @@ mask-name:
     <button-settings>
 ```
 
+## Note
+
+* `current`: The current value of the progress. It can be a number or a placeholder.
+* `max`: The max value of the progress. It can be a number or a placeholder.
+* `current-button`: The [button](../../../Button.md) that represents the filled part of the progress.
+* `max-button`: The [button](../../../Button.md) that represents the empty part of the progress.
+
 ## Example
 
 ```yaml
