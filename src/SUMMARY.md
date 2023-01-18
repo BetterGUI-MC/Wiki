@@ -91,6 +91,19 @@
 * [MaskedGUI](premium/masked-gui.md)
   * [Slot Grid](premium/masked-gui/slot-grid.md)
   * [Mask](premium/masked-gui/mask.md)
+    * [Simple Mask](premium/masked-gui/mask/simple-mask.md)
+    * [Multi-Slot Mask](premium/masked-gui/mask/multi-slot-mask.md)
+    * [Pattern Mask](premium/masked-gui/mask/pattern-mask.md)
+    * [Progress Mask](premium/masked-gui/mask/progress-mask.md)
+    * [Hybrid Mask](premium/masked-gui/mask/hybrid-mask.md)
+    * [Animated Mask](premium/masked-gui/mask/animated-mask.md)
+    * [One-Time Animated Mask](premium/masked-gui/mask/one-time-animated-mask.md)
+    * [Predicate Mask](premium/masked-gui/mask/predicate-mask.md)
+    * [List Mask](premium/masked-gui/mask/list-mask.md)
+    * [Button Paginated Mask](premium/masked-gui/mask/button-paginated-mask.md)
+    * [Sequence Paginated Mask](premium/masked-gui/mask/sequence-paginated-mask.md)
+    * [Mask Paginated Mask](premium/masked-gui/mask/mask-paginated-mask.md)
+    * [Template Mask](premium/masked-gui/mask/template-mask.md)
 
 # Developer
 
