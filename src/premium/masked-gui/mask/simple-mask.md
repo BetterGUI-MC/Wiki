@@ -1,6 +1,6 @@
 # Simple Mask
 
-This is the default mask if you don't specify any mask. That means that all the [Buttons](../../../Button.md) are Simple Mask by default.
+This is the default mask if you don't specify any mask. That means that all [Buttons](../../../Button.md) are Simple Mask by default.
 
 ```yaml
 multi-slot:
