@@ -19,6 +19,10 @@ mask-name:
 
 The template folder (located at `plugins/BetterGUI/addon/MaskedGUI/template`) is a folder containing `yml` files defining common masks to use in all menus. That means you can create a template mask by simply creating a `yml` file in the template folder, add the common mask settings, and use it in other masks.
 
+## Note
+
+* `variable`: The variable is a way to pass values to the template mask. Check out [Use `variable` option](../../../button/template-button.md#use-variable-option) for more information.
+
 ## Example
 
 ```yaml
