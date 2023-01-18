@@ -19,7 +19,7 @@ You can use this to make a simple menu
 * [Hybrid Mask](./mask/hybrid-mask.md)
 * [Animated Mask](./mask/animated-mask.md)
 * [One-Time Animated Mask](./mask/one-time-animated-mask.md)
-* Predicate Mask
+* [Predicate Mask](./mask/predicate-mask.md)
 * List Mask
 * Button Paginated Mask
 * Sequence Paginated Mask
