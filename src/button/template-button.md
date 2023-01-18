@@ -4,7 +4,7 @@
 ```yaml
 button-name:
   type: template
-  template: <name> # The name from template-buttons.yml
+  template: <name> # The name from template folder
   variable:
     <variable1>: <value1>
     <variable2>: <value2>
@@ -24,7 +24,7 @@ button-name:
 
 * **Normal Case**
 ```yaml
-# Not using template-buttons.yml
+# Not using template
 button1:
   id: stone
   name: "&cThis is button"
@@ -48,14 +48,14 @@ button2:
 
 * **Using Template Button**
 ```yaml
-# Using template-buttons.yml
+# Using template
 button1:
   type: template
-  template: test # The name from template-buttons.yml
+  template: test # The name from template folder
   command: "tell: &cYou clicked"
 button2:
   type: template
-  template: test # The name from template-buttons.yml
+  template: test # The name from template folder
   command: "tell: &cYou clicked this again"
 
 # Template File

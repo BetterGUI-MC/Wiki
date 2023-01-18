@@ -24,3 +24,4 @@ You can use this to make a simple menu
 * [Button Paginated Mask](./mask/button-paginated-mask.md)
 * [Sequence Paginated Mask](./mask/sequence-paginated-mask.md)
 * [Mask Paginated Mask](./mask/mask-paginated-mask.md)
+* [Template Mask](./mask/template-mask.md)
