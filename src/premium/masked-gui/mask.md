@@ -18,7 +18,7 @@ You can use this to make a simple menu
 * [Progress Mask](./mask/progress-mask.md)
 * [Hybrid Mask](./mask/hybrid-mask.md)
 * [Animated Mask](./mask/animated-mask.md)
-* One-Time Animated Mask
+* [One-Time Animated Mask](./mask/one-time-animated-mask.md)
 * Predicate Mask
 * List Mask
 * Button Paginated Mask

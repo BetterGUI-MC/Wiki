@@ -17,6 +17,11 @@ mask-name:
     ...
 ```
 
+## Note
+
+* `update`: The number of ticks between each frame.
+* `async`: Whether the animation will be played asynchronously.
+
 ## Example
 
 ```yaml
