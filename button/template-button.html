@@ -151,7 +151,7 @@
 <h2 id="format"><a class="header" href="#format">Format</a></h2>
 <pre><code class="language-yaml">button-name:
   type: template
-  template: &lt;name&gt; # The name from template-buttons.yml
+  template: &lt;name&gt; # The name from template folder
   variable:
     &lt;variable1&gt;: &lt;value1&gt;
     &lt;variable2&gt;: &lt;value2&gt;
@@ -173,7 +173,7 @@
 <ul>
 <li><strong>Normal Case</strong></li>
 </ul>
-<pre><code class="language-yaml"># Not using template-buttons.yml
+<pre><code class="language-yaml"># Not using template
 button1:
   id: stone
   name: &quot;&amp;cThis is button&quot;
@@ -197,14 +197,14 @@ button2:
 <ul>
 <li><strong>Using Template Button</strong></li>
 </ul>
-<pre><code class="language-yaml"># Using template-buttons.yml
+<pre><code class="language-yaml"># Using template
 button1:
   type: template
-  template: test # The name from template-buttons.yml
+  template: test # The name from template folder
   command: &quot;tell: &amp;cYou clicked&quot;
 button2:
   type: template
-  template: test # The name from template-buttons.yml
+  template: test # The name from template folder
   command: &quot;tell: &amp;cYou clicked this again&quot;
 
 # Template File
