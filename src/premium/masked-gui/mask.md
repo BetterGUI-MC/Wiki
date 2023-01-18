@@ -21,6 +21,6 @@ You can use this to make a simple menu
 * [One-Time Animated Mask](./mask/one-time-animated-mask.md)
 * [Predicate Mask](./mask/predicate-mask.md)
 * [List Mask](./mask/list-mask.md)
-* Button Paginated Mask
-* Sequence Paginated Mask
+* [Button Paginated Mask](./mask/button-paginated-mask.md)
+* [Sequence Paginated Mask](./mask/sequence-paginated-mask.md)
 * Mask Paginated Mask 
