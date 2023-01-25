@@ -55,6 +55,8 @@
   * [Skull](item-modifier/skull-modifier.md)
   * [NBT](item-modifier/nbt-modifier.md)
 * [Variable](./Variable.md)
+* [Argument Processor](./Argument-Processor.md)
+  * [Store Argument](./argument-processor/store-argument-processor.md)
 
 # Misc
 

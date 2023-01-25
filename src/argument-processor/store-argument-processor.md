@@ -1,11 +1,11 @@
-# Args Menu
-
-> Deprecated: This menu type is deprecated. Use [Simple Menu](./simple-menu.md) with [Store Argument Processor](../argument-processor/store-argument-processor.md) instead
+# Store Argument Processor
 
 ## Format
 ```yaml
 menu-settings:
-  menu-type: args
+  argument-processor: # Add the processor to the menu
+  - store-argument
+
   min-args: <number>
   args:
   - arg1
@@ -28,21 +28,22 @@ button2:
 ```
 
 ## Description
-* Args Menu is the same as [Simple Menu](./simple-menu.md), with 4 more sections in the `menu-settings`
+* This is a processor to store the arguments as [Variables](../Variable.md). It introduces 4 more sections in the `menu-settings`
   * `min-args` sets the minimum amount of arguments in the command to open the menu
   * `args` sets the arguments
   * `min-args-action` sets the [Action](../Action.md) when the number of arguments is lower than `min-args`
   * `default-args` sets the default arguments
 
 ## Note
-* When using this menu, the menu will create some [Variables](../Variable.md):
+* When using this processor, the menu will create some [Variables](../Variable.md):
   * `{merged_args}` returns the completed arguments that the player typed to open the menu
   * `{arg_<arg>}` returns the value of the argument at the `<arg>` position from the menu
 
 ## Example
 ```yaml
 menu-settings:
-  menu-type: args
+  argument-processor:
+  - store-argument
 
   # The minimum number of arguments is 2
   min-args: 2
@@ -67,4 +68,4 @@ button:
   - "Arg 1: {arg_test}"
   - "Arg 2: {arg_otest}"
   - "Merged Args: {merged_args}"
-``` 
+```  

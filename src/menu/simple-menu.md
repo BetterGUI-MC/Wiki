@@ -65,6 +65,11 @@ menu-settings:
   # The creator to create the inventory. Mainly used to create custom inventories provided by addons.
   creator: default
 
+  # The list of argument processors to process the arguments of the command to open the menu
+  argument-processor:
+  - <argument-processor>
+  - <argument-processor>
+
 # This is a special button. It will fill all empty slots of the inventory (You don't need to set this button)
 default-button:
   <button-settings>
@@ -83,6 +88,7 @@ This is the default menu type of BetterGUI, represents a chest-like GUI.
 * None of the `menu-settings` is required to get the menu working.
 * The `open-action` and `close-action` use the [Action](../Action.md) value.
 * The `view-requirement` and `close-requirement` use the [Requirement Set](../Requirement-Set.md) value.
+* The `argument-processor` use the [Argument Processor](../Argument-Processor.md) value.
 
 ## Example
 ```yaml
