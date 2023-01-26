@@ -1783,6 +1783,7 @@ colored-leather-chestplate:
 <ul>
 <li>An argument processor is a tool to process the argument part of the command to open the menu.</li>
 <li>Some menus support argument processors. You can set the argument processor in the <code>argument-processor</code> section of the <code>menu-settings</code> section.</li>
+<li>Some menus support multiple argument processors. The argument processors are executed in the order they are specified in the <code>argument-processor</code> section.</li>
 <li>More information on each argument processor can be found in its own page.</li>
 </ul>
 <h2 id="built-in"><a class="header" href="#built-in">Built-in</a></h2>
@@ -2601,21 +2602,15 @@ inventory</li>
 </blockquote>
 <h2 id="format-55"><a class="header" href="#format-55">Format</a></h2>
 <pre><code class="language-yaml">menu-settings:
-  menu-type: target
-  ...
-
-...
-</code></pre>
-<pre><code class="language-yaml">menu-settings:
-  menu-type: target-args # To use settings from Args Menun
+  argument-processor:
+  - target # To use settings from Target Menu
   ...
 
 ...
 </code></pre>
 <h2 id="description-63"><a class="header" href="#description-63">Description</a></h2>
-<p>This is a variant of <a href="addon/../menu/simple-menu.html">Simple Menu</a> (<a href="addon/../menu/args-menu.html">Args Menu</a> if the <code>menu-type</code> is <code>target-args</code>) that supports specifying the target player to do actions with</p>
+<p>This is <a href="addon/../Argument-Processor.html">Argument Processor</a> that supports specifying the target player to do actions with</p>
 <h2 id="note-14"><a class="header" href="#note-14">Note</a></h2>
-<h3 id="target-variable"><a class="header" href="#target-variable">Target Variable</a></h3>
 <p>The menu will register 2 <a href="addon/../Variable.html#menu-variables">Menu Variables</a>:</p>
 <ul>
 <li><code>{target_&lt;variable_name&gt;}</code> to fetch the variable <code>&lt;variable_name&gt;</code> of the target player
@@ -2631,21 +2626,55 @@ inventory</li>
 </li>
 <li><code>{target_papi_&lt;placeholder_name&gt;}</code> to fetch the PlaceholderAPI's placeholder <code>&lt;placeholder_name&gt;</code> of the target player</li>
 </ul>
-<h3 id="open-command"><a class="header" href="#open-command">Open Command</a></h3>
-<p>You can specify the target player to do actions with:</p>
-<ul>
-<li>In <a href="addon/../Command-&amp;-Permission.html">open command</a>: 
-<ul>
-<li><code>/&lt;menu_command&gt; &lt;target_player&gt; [args]</code></li>
-<li><code>/openmenu &lt;menu_file&gt; &lt;player&gt; &lt;target_player&gt; [args]</code></li>
-</ul>
-</li>
-<li>In <a href="addon/../action/open-menu.html"><code>open-menu</code> action</a>:
-<ul>
-<li><code>open: &lt;menu_file&gt; &lt;target_player&gt; [args]</code></li>
-</ul>
-</li>
-</ul>
+<h2 id="example-56"><a class="header" href="#example-56">Example</a></h2>
+<h3 id="target-menu-1"><a class="header" href="#target-menu-1">Target Menu</a></h3>
+<pre><code class="language-yaml">menu-settings:
+  argument-processor: target
+  name: &quot;&amp;c&amp;lTest Target &amp;f&amp;l| &amp;a&amp;lCurrent: &amp;4&amp;l{target_player}&quot;
+  command: target
+  rows: 1
+  
+info:
+  slot: 0
+  name: &quot;&amp;bTarget Info&quot;
+  id: paper
+  lore:
+  - &quot;&amp;dWorld: &amp;f{target_world}&quot;
+  - &quot;&amp;dPing: &amp;f{target_ping}&quot;
+  - &quot;&amp;dLocation: &amp;f{target_x} {target_y} {target_z}&quot;
+  
+fly:
+  slot: 1
+  name: &quot;&amp;bToggle Fly&quot;
+  id: feather
+  command: &quot;console: fly {target_player}&quot;
+</code></pre>
+<h3 id="target-menu-with-store-argument-processor"><a class="header" href="#target-menu-with-store-argument-processor">Target Menu with <a href="addon/../argument-processor/store-argument-processor.html">Store Argument Processor</a></a></h3>
+<pre><code class="language-yaml">menu-settings:
+  arg-processor: 
+  - target # To use settings from Target Menu
+  - store # To use settings from Store Argument Processor
+ 
+  # The settings of Store Argument Processor
+  min-args: 2
+  args:
+  - test
+  - otest
+  default-args: &quot;hello world&quot;
+  min-args-action: &quot;tell: &amp;cAt least 2 arguments&quot;
+
+  command: testarg
+  title: &quot;{target_player}&quot;
+
+button:
+  slot: 1
+  id: stone
+  name: &quot;&amp;bTest Arguments&quot;
+  lore:
+  - &quot;Arg 1: {arg_test}&quot;
+  - &quot;Arg 2: {arg_otest}&quot;
+  - &quot;Merged Args: {merged_args}&quot; 
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="world-and-region"><a class="header" href="#world-and-region">World And Region</a></h1>
 <blockquote>
 <p><a href="https://github.com/BetterGUI-MC/World-And-Region/">Code</a> | <a href="https://ci.codemc.io/job/BetterGUI-MC/view/Addon/job/World%20And%20Region/">Download</a></p>
@@ -2726,7 +2755,7 @@ xmat: &lt;material&gt;
 <ul>
 <li>This modifier will set the <code>&lt;material&gt;</code> of the item</li>
 </ul>
-<h4 id="example-56"><a class="header" href="#example-56">Example</a></h4>
+<h4 id="example-57"><a class="header" href="#example-57">Example</a></h4>
 <pre><code class="language-yaml">stone-button:
   slot: 1
   xid: stone
@@ -2760,7 +2789,7 @@ xmat: &lt;material&gt;
 <li>This modifier will add the <code>&lt;enchantment&gt;</code>s to the item</li>
 <li>You can set the <code>[level]</code> of the <code>&lt;enchantment&gt;</code>. It's optional.</li>
 </ul>
-<h4 id="example-57"><a class="header" href="#example-57">Example</a></h4>
+<h4 id="example-58"><a class="header" href="#example-58">Example</a></h4>
 <pre><code class="language-yaml">enchanted-sword:
   NAME: '&amp;aEnchanted sword'
   LORE:
@@ -2790,7 +2819,7 @@ xmat: &lt;material&gt;
 <li>This modifier will add the <code>&lt;potion&gt;</code> effect to the item.</li>
 <li>You can set the <code>[duration]</code> and <code>[amplifier]</code> of the <code>&lt;potion&gt;</code> effect. These are optional.</li>
 </ul>
-<h4 id="example-58"><a class="header" href="#example-58">Example</a></h4>
+<h4 id="example-59"><a class="header" href="#example-59">Example</a></h4>
 <pre><code class="language-yaml">potion:
   position-x: 1
   position-y: 1
@@ -2810,7 +2839,7 @@ xhead: &lt;skull&gt;
 <li>This modifier will set the <code>&lt;skull&gt;</code> of the item</li>
 <li><code>&lt;skull&gt;</code> accepts a player name, an UUID (unique id), an Base64 value, or a <code>texture.minecraft.net</code> URL</li>
 </ul>
-<h4 id="example-59"><a class="header" href="#example-59">Example</a></h4>
+<h4 id="example-60"><a class="header" href="#example-60">Example</a></h4>
 <pre><code class="language-yaml">skull:
   position-x: 1
   position-y: 1
@@ -2840,7 +2869,7 @@ per-player-skull:
 <li>This action will send the <code>&lt;sound&gt;</code> to the player</li>
 <li>You can specify the <code>[volume]</code> and the <code>[pitch]</code> of the <code>&lt;sound&gt;</code>. Those are optional</li>
 </ul>
-<h4 id="example-60"><a class="header" href="#example-60">Example</a></h4>
+<h4 id="example-61"><a class="header" href="#example-61">Example</a></h4>
 <ul>
 <li><code>xsound: BLOCK_NOTE_BLOCK_PLING</code></li>
 <li><code>xsound: BLOCK_NOTE_BLOCK_PLING 1 2</code></li>
@@ -2875,7 +2904,7 @@ head$: &lt;skull&gt;
 <li>This modifier will set the <code>&lt;skull&gt;</code> of the item</li>
 <li><code>&lt;skull&gt;</code> accepts a player name or an UUID (unique id)</li>
 </ul>
-<h4 id="example-61"><a class="header" href="#example-61">Example</a></h4>
+<h4 id="example-62"><a class="header" href="#example-62">Example</a></h4>
 <pre><code class="language-yaml">skull:
   position-x: 1
   position-y: 1
@@ -2907,7 +2936,7 @@ mini-lore:
 <li><code>lore$</code> for the <code>mini-lore</code> modifier</li>
 </ol>
 <p>Note that the legacy color codes (<code>&amp;c</code>, <code>&amp;3</code>) does not work in the new format.</p>
-<h4 id="example-62"><a class="header" href="#example-62">Example</a></h4>
+<h4 id="example-63"><a class="header" href="#example-63">Example</a></h4>
 <pre><code class="language-yaml">minimessage:
   position-x: 1
   position-y: 1
@@ -2930,7 +2959,7 @@ mini-lore:
 <li>This is an addon to apply math expressions in some settings of the menu</li>
 <li>With this, you can write advanced math in menu. Especially, this addon is useful to write advanced conditions in <a href="addon/../requirement/condition-requirement.html">Condition Requirement</a></li>
 </ul>
-<h2 id="example-63"><a class="header" href="#example-63">Example</a></h2>
+<h2 id="example-64"><a class="header" href="#example-64">Example</a></h2>
 <pre><code class="language-yaml">stone:
   id: stone
   amount: &quot;25 + 3&quot;
@@ -3051,7 +3080,7 @@ item-bridge: &lt;id&gt;
 <p>This item modifier allows you to use the item with the <code>&lt;id&gt;</code> from <a href="https://www.spigotmc.org/resources/itembridge-save-items-and-use-them-wherever-you-want-including-other-plugins-best-w-customitems.77080/">ItemBridge</a> in your menus.</p>
 <h2 id="note-16"><a class="header" href="#note-16">Note</a></h2>
 <p>This item modifier is order-sensitive. You have to set it before other modifiers.</p>
-<h2 id="example-64"><a class="header" href="#example-64">Example</a></h2>
+<h2 id="example-65"><a class="header" href="#example-65">Example</a></h2>
 <pre><code class="language-yaml">test-itembridge:
   slot: 0
   itembridge: &quot;minecraft:stone&quot;
@@ -3075,7 +3104,7 @@ item-bridge: &lt;id&gt;
 <li><code>meta: &lt;key&gt;</code> removes the value of the metadata of the player at the key <code>&lt;key&gt;</code></li>
 </ul>
 <p>Note: In <code>&lt;value&gt;</code> you can use the variable <code>{value}</code> to get the previous value of the metadata.</p>
-<h2 id="example-65"><a class="header" href="#example-65">Example</a></h2>
+<h2 id="example-66"><a class="header" href="#example-66">Example</a></h2>
 <pre><code class="language-yaml">T:
   id: diamond
   name: &quot;&amp;b&amp;lMeta: &amp;f{meta_number_diamond_count}&quot;
@@ -3201,7 +3230,7 @@ demo-slot:
       &lt;button-settings&gt;
     ...
 </code></pre>
-<h2 id="example-66"><a class="header" href="#example-66">Example</a></h2>
+<h2 id="example-67"><a class="header" href="#example-67">Example</a></h2>
 <pre><code class="language-yaml">demo-slot:
   mask: multislot
   slot: 1-1-9-6
@@ -3262,7 +3291,7 @@ demo-slot:
 <li><code>pattern</code>: The pattern that will be drawn. The pattern is a list of strings. Each string represents a row of the pattern. The length of each string must be the same. The character in the string represents the button that will be drawn on that position. The character must be unique.</li>
 <li>The name of each button in the <code>child</code> section is the character that is used to draw on the pattern. The character must be unique.</li>
 </ul>
-<h2 id="example-67"><a class="header" href="#example-67">Example</a></h2>
+<h2 id="example-68"><a class="header" href="#example-68">Example</a></h2>
 <pre><code class="language-yaml">demo-slot:
   mask: pattern
   pattern:
@@ -3322,7 +3351,7 @@ demo-slot:
 <li><code>current-button</code>: The <a href="premium/masked-gui/mask/../../../Button.html">button</a> that represents the filled part of the progress.</li>
 <li><code>max-button</code>: The <a href="premium/masked-gui/mask/../../../Button.html">button</a> that represents the empty part of the progress.</li>
 </ul>
-<h2 id="example-68"><a class="header" href="#example-68">Example</a></h2>
+<h2 id="example-69"><a class="header" href="#example-69">Example</a></h2>
 <pre><code class="language-yaml">demo-slot:
   mask: progress
   current: &quot;{level}&quot;
@@ -3349,7 +3378,7 @@ demo-slot:
       &lt;mask-settings&gt;
     ...
 </code></pre>
-<h2 id="example-69"><a class="header" href="#example-69">Example</a></h2>
+<h2 id="example-70"><a class="header" href="#example-70">Example</a></h2>
 <pre><code class="language-yaml">demo-slot:
   mask: hybrid
   child:
@@ -3413,7 +3442,7 @@ demo-slot:
 <li><code>update</code>: The number of ticks between each frame.</li>
 <li><code>async</code>: Whether the animation will be played asynchronously.</li>
 </ul>
-<h2 id="example-70"><a class="header" href="#example-70">Example</a></h2>
+<h2 id="example-71"><a class="header" href="#example-71">Example</a></h2>
 <pre><code class="language-yaml">demo-slot:
   mask: animated
   update: 5
@@ -3507,7 +3536,7 @@ demo-slot:
 <ul>
 <li><code>keep-last</code>: Whether the last frame will be kept after the animation is finished. The default value is <code>false</code>.</li>
 </ul>
-<h2 id="example-71"><a class="header" href="#example-71">Example</a></h2>
+<h2 id="example-72"><a class="header" href="#example-72">Example</a></h2>
 <pre><code class="language-yaml">demo-slot:
   mask: one-time-animated
   update: 5
@@ -3561,7 +3590,7 @@ demo-slot:
 <li><code>view-requirement</code>: The <a href="premium/masked-gui/mask/../../../Requirement-Set.html">set of requirements</a> that must be met for the <code>success</code> mask to be shown.</li>
 <li><code>check-only-on-creation</code>: If this value is set to <code>true</code>, the plugin will only check the <code>view-requirement</code> when the player opens the menu.</li>
 </ul>
-<h2 id="example-72"><a class="header" href="#example-72">Example</a></h2>
+<h2 id="example-73"><a class="header" href="#example-73">Example</a></h2>
 <pre><code class="language-yaml">demo-slot:
   mask: predicate
   view-requirement:
@@ -3608,7 +3637,7 @@ demo-slot:
       &lt;mask-settings&gt;
     ...
 </code></pre>
-<h2 id="example-73"><a class="header" href="#example-73">Example</a></h2>
+<h2 id="example-74"><a class="header" href="#example-74">Example</a></h2>
 <pre><code class="language-yaml">demo-slot:
   mask: list
   child:
@@ -3689,7 +3718,7 @@ demo-slot:
 <li><code>next-page: &lt;signal&gt;</code>: Changes the page to the next page.</li>
 <li><code>previous-page: &lt;signal&gt;</code>: Changes the page to the previous page.</li>
 </ul>
-<h2 id="example-74"><a class="header" href="#example-74">Example</a></h2>
+<h2 id="example-75"><a class="header" href="#example-75">Example</a></h2>
 <pre><code class="language-yaml"># The paginated mask
 demo-slot:
   mask: button-paginated
@@ -3771,7 +3800,7 @@ next-button:
 <li><code>next-page: &lt;signal&gt;</code>: Changes the page to the next page.</li>
 <li><code>previous-page: &lt;signal&gt;</code>: Changes the page to the previous page.</li>
 </ul>
-<h2 id="example-75"><a class="header" href="#example-75">Example</a></h2>
+<h2 id="example-76"><a class="header" href="#example-76">Example</a></h2>
 <pre><code class="language-yaml"># The paginated mask
 demo-slot:
   mask: sequence-paginated
@@ -3852,7 +3881,7 @@ next-button:
 <li><code>next-page: &lt;signal&gt;</code>: Changes the page to the next page.</li>
 <li><code>previous-page: &lt;signal&gt;</code>: Changes the page to the previous page.</li>
 </ul>
-<h2 id="example-76"><a class="header" href="#example-76">Example</a></h2>
+<h2 id="example-77"><a class="header" href="#example-77">Example</a></h2>
 <pre><code class="language-yaml"># The paginated mask
 demo-slot:
   mask: mask-paginated
@@ -3965,7 +3994,7 @@ next-button:
 <ul>
 <li><code>variable</code>: The variable is a way to pass values to the template mask. Check out <a href="premium/masked-gui/mask/../../../button/template-button.html#use-variable-option">Use <code>variable</code> option</a> for more information.</li>
 </ul>
-<h2 id="example-77"><a class="header" href="#example-77">Example</a></h2>
+<h2 id="example-78"><a class="header" href="#example-78">Example</a></h2>
 <pre><code class="language-yaml"># Template File
 test-pattern:
   mask: pattern

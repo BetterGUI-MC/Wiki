@@ -153,21 +153,15 @@
 </blockquote>
 <h2 id="format"><a class="header" href="#format">Format</a></h2>
 <pre><code class="language-yaml">menu-settings:
-  menu-type: target
-  ...
-
-...
-</code></pre>
-<pre><code class="language-yaml">menu-settings:
-  menu-type: target-args # To use settings from Args Menun
+  argument-processor:
+  - target # To use settings from Target Menu
   ...
 
 ...
 </code></pre>
 <h2 id="description"><a class="header" href="#description">Description</a></h2>
-<p>This is a variant of <a href="../menu/simple-menu.html">Simple Menu</a> (<a href="../menu/args-menu.html">Args Menu</a> if the <code>menu-type</code> is <code>target-args</code>) that supports specifying the target player to do actions with</p>
+<p>This is <a href="../Argument-Processor.html">Argument Processor</a> that supports specifying the target player to do actions with</p>
 <h2 id="note"><a class="header" href="#note">Note</a></h2>
-<h3 id="target-variable"><a class="header" href="#target-variable">Target Variable</a></h3>
 <p>The menu will register 2 <a href="../Variable.html#menu-variables">Menu Variables</a>:</p>
 <ul>
 <li><code>{target_&lt;variable_name&gt;}</code> to fetch the variable <code>&lt;variable_name&gt;</code> of the target player
@@ -183,21 +177,55 @@
 </li>
 <li><code>{target_papi_&lt;placeholder_name&gt;}</code> to fetch the PlaceholderAPI's placeholder <code>&lt;placeholder_name&gt;</code> of the target player</li>
 </ul>
-<h3 id="open-command"><a class="header" href="#open-command">Open Command</a></h3>
-<p>You can specify the target player to do actions with:</p>
-<ul>
-<li>In <a href="../Command-&amp;-Permission.html">open command</a>: 
-<ul>
-<li><code>/&lt;menu_command&gt; &lt;target_player&gt; [args]</code></li>
-<li><code>/openmenu &lt;menu_file&gt; &lt;player&gt; &lt;target_player&gt; [args]</code></li>
-</ul>
-</li>
-<li>In <a href="../action/open-menu.html"><code>open-menu</code> action</a>:
-<ul>
-<li><code>open: &lt;menu_file&gt; &lt;target_player&gt; [args]</code></li>
-</ul>
-</li>
-</ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<h3 id="target-menu-1"><a class="header" href="#target-menu-1">Target Menu</a></h3>
+<pre><code class="language-yaml">menu-settings:
+  argument-processor: target
+  name: &quot;&amp;c&amp;lTest Target &amp;f&amp;l| &amp;a&amp;lCurrent: &amp;4&amp;l{target_player}&quot;
+  command: target
+  rows: 1
+  
+info:
+  slot: 0
+  name: &quot;&amp;bTarget Info&quot;
+  id: paper
+  lore:
+  - &quot;&amp;dWorld: &amp;f{target_world}&quot;
+  - &quot;&amp;dPing: &amp;f{target_ping}&quot;
+  - &quot;&amp;dLocation: &amp;f{target_x} {target_y} {target_z}&quot;
+  
+fly:
+  slot: 1
+  name: &quot;&amp;bToggle Fly&quot;
+  id: feather
+  command: &quot;console: fly {target_player}&quot;
+</code></pre>
+<h3 id="target-menu-with-store-argument-processor"><a class="header" href="#target-menu-with-store-argument-processor">Target Menu with <a href="../argument-processor/store-argument-processor.html">Store Argument Processor</a></a></h3>
+<pre><code class="language-yaml">menu-settings:
+  arg-processor: 
+  - target # To use settings from Target Menu
+  - store # To use settings from Store Argument Processor
+ 
+  # The settings of Store Argument Processor
+  min-args: 2
+  args:
+  - test
+  - otest
+  default-args: &quot;hello world&quot;
+  min-args-action: &quot;tell: &amp;cAt least 2 arguments&quot;
+
+  command: testarg
+  title: &quot;{target_player}&quot;
+
+button:
+  slot: 1
+  id: stone
+  name: &quot;&amp;bTest Arguments&quot;
+  lore:
+  - &quot;Arg 1: {arg_test}&quot;
+  - &quot;Arg 2: {arg_otest}&quot;
+  - &quot;Merged Args: {merged_args}&quot; 
+</code></pre>
 
                     </main>
 
