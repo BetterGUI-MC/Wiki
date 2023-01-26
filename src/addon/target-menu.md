@@ -4,25 +4,18 @@
 ## Format
 ```yaml
 menu-settings:
-  menu-type: target
-  ...
-
-...
-```
-```yaml
-menu-settings:
-  menu-type: target-args # To use settings from Args Menun
+  argument-processor:
+  - target # To use settings from Target Menu
   ...
 
 ...
 ```
 
 ## Description
-This is a variant of [Simple Menu](../menu/simple-menu.md) ([Args Menu](../menu/args-menu.md) if the `menu-type` is `target-args`) that supports specifying the target player to do actions with
+This is [Argument Processor](../Argument-Processor.md) that supports specifying the target player to do actions with
 
 ## Note
 
-### Target Variable
 The menu will register 2 [Menu Variables](../Variable.md#menu-variables):
 * `{target_<variable_name>}` to fetch the variable `<variable_name>` of the target player
   * Example:
@@ -31,10 +24,58 @@ The menu will register 2 [Menu Variables](../Variable.md#menu-variables):
     * `{exp_to_level}` -> `{target_exp_to_level}`
 * `{target_papi_<placeholder_name>}` to fetch the PlaceholderAPI's placeholder `<placeholder_name>` of the target player
 
-### Open Command
-You can specify the target player to do actions with:
-* In [open command](../Command-&-Permission.md): 
-  * `/<menu_command> <target_player> [args]`
-  * `/openmenu <menu_file> <player> <target_player> [args]`
-* In [`open-menu` action](../action/open-menu.md):
-  * `open: <menu_file> <target_player> [args]`
+## Example
+
+### Target Menu
+
+```yaml
+menu-settings:
+  argument-processor: target
+  name: "&c&lTest Target &f&l| &a&lCurrent: &4&l{target_player}"
+  command: target
+  rows: 1
+  
+info:
+  slot: 0
+  name: "&bTarget Info"
+  id: paper
+  lore:
+  - "&dWorld: &f{target_world}"
+  - "&dPing: &f{target_ping}"
+  - "&dLocation: &f{target_x} {target_y} {target_z}"
+  
+fly:
+  slot: 1
+  name: "&bToggle Fly"
+  id: feather
+  command: "console: fly {target_player}"
+```
+
+### Target Menu with [Store Argument Processor](../argument-processor/store-argument-processor.md)
+
+```yaml
+menu-settings:
+  arg-processor: 
+  - target # To use settings from Target Menu
+  - store # To use settings from Store Argument Processor
+ 
+  # The settings of Store Argument Processor
+  min-args: 2
+  args:
+  - test
+  - otest
+  default-args: "hello world"
+  min-args-action: "tell: &cAt least 2 arguments"
+
+  command: testarg
+  title: "{target_player}"
+
+button:
+  slot: 1
+  id: stone
+  name: "&bTest Arguments"
+  lore:
+  - "Arg 1: {arg_test}"
+  - "Arg 2: {arg_otest}"
+  - "Merged Args: {merged_args}" 
+```
